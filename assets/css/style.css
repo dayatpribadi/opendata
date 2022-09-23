@@ -290,6 +290,11 @@ hr {
 	border-radius: 0.5rem;
 	padding: 8px;
 }
+
+.dropdown:hover .dropdown-menu {
+	display: block;
+}
+
 .dropdown-menu .dropdown-item {
 	font-size: 13px;
 	padding: 7px 13px;
