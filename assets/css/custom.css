@@ -5,3 +5,23 @@
 .dropdown .mega-menu {
     width: 100%;
 }
+
+.dataset__desk .text-start a {
+    text-decoration: none;
+    color: #333;
+
+}
+
+.margin-top-bookmark-detail {
+    margin-top: -40px;
+}
+
+div.dataTables_wrapper {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.button-hover:hover {
+    color: #fff !important;
+    font-weight: 800;
+}
