@@ -643,18 +643,18 @@ hr {
 		padding: 3px 4px;
 	}
 	.osahan-header .navbar-nav .nav-link {
-		text-align: center;
+		text-align: justify;
 		padding: 12px 11px;
 	}
 	.osahan-header .me-3.top-link {
 		margin: 11px 0 0 0px !important;
 	}
 	.osahan-header .navbar-collapse .d-flex.align-items-center.gap-2 {
-		justify-content: center;
+		justify-content: start;
 		margin: 8px 0 7px 0;
 	}
 	.osahan-header .dropdown-menu .dropdown-item {
-		text-align: center;
+		text-align: justify;
 	}
 	.btn-group.gap-3.osahan-btn-group.d-flex {
 		display: unset !important;
