@@ -452,7 +452,7 @@ hr {
 .mobile-nav-bottom {
     z-index: 9;
     bottom: 0;
-	background-color: #000000;
+	background-color: #DA0037;
 }
 .mobile-nav-bottom a {
     position: relative;
@@ -467,7 +467,7 @@ hr {
 }
 .mobile-nav-bottom a span {
     font-size: 27px;
-	color: #0aa9bd;
+	color: #FFF;
 }
 .mobile-nav-bottom a b {
 	position: absolute;
