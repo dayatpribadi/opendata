@@ -21,7 +21,6 @@
       <link rel="stylesheet" href="assets/vendor/DataTables/DataTables-1.12.1/css/dataTables.jqueryui.css">
       <link rel="stylesheet" href="assets/vendor/DataTables/DataTables-1.12.1/css/dataTables.dataTables.css">
       
-
       <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.1/dist/leaflet.css" integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14=" crossorigin="" />
 
    </head>
@@ -238,7 +237,9 @@
 
                                     <div class="row row-cols-1 row-cols-md-1 g-4">
                                        <div class="col">
-                                          <table id="example" class="display nowrap" style="width:100%">
+
+
+                                          <table id="example2" class="display nowrap" style="width:100%">
                                              <thead>
                                                  <tr>
                                                      <th>First name</th>
@@ -1467,10 +1468,11 @@
          <a href="visualisasi.html"><span class="bi bi-file-earmark-bar-graph"></span> Visualisasi</a>
          <a data-bs-toggle="modal" href="#exampleModalToggle"><span class="bi bi-unlock-fill"></span> Sign In</a>
       </div>
-      <!-- Bootstrap core JavaScript -->
-      <script src="assets/vendor/jquery/jquery.min.js"></script>
-      <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
       <!-- Custom scripts for all pages-->
+      <script src="assets/vendor/bootstrap/js/bootstrap.min.js"></script>
+      <!-- <script src="assets/js/jquery-3.6.1.min.js"></script> -->
+
       <script src="assets/js/custom.js"></script>
       <script src="https://js.hcaptcha.com/1/api.js" async defer></script>
       <!-- Data Tables -->
@@ -1479,19 +1481,21 @@
       <!-- Data Leaflet -->
       <script src="https://unpkg.com/leaflet@1.9.1/dist/leaflet.js" integrity="sha256-NDI0K41gVbWqfkkaHj15IzU7PtMoelkzyKp8TOaFQ3s=" crossorigin=""></script>
       <script src="assets/vendor/leaflet/oganilir_residence.js"></script>
-      
+      <!-- Data Grafik -->
       <script src="assets/vendor/chart.js/dist/chart.min.js"></script>
       <script src="assets/vendor/chart.js/dist/data-grafik.js"></script>
 
+      <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
       <script>
-                  $(document).ready(function () {
-            $('#example').DataTable({
+         $(document).ready(function () {
+            $('#example2').DataTable({
                scrollY: 300,
                scrollX: true,
             });
-      });
+          });
       </script>
+      
 
    </body>
 </html>
