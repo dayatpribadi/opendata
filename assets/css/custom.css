@@ -25,3 +25,15 @@ div.dataTables_wrapper {
     color: #fff !important;
     font-weight: 800;
 }
+
+.data-table {
+    background: #fff !important;
+    box-shadow: 1px 3px 5px #aaa;
+    padding: 10px;
+}
+
+.data-table .btn {
+    padding: 5px 10px;
+    margin: 5px;
+    border-radius: 5px;
+}
