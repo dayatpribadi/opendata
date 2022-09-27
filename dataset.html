@@ -121,7 +121,7 @@
                            <p class="mb-4 text-white">Temukan kumpulan data-data mentah berupa tabel yang bisa diolah lebih lanjut di sini. Open Data Ogan Ilir menyediakan akses ke beragam koleksi dataset dari seluruh Organisasi Perangkat Daerah di Kabupaten Ogan Ilir.</p>
                            <div class="d-flex align-items-center gap-4">
                               <button href="#lacak__dataset" class="btn btn-sm btn-outline-light text-uppercase" type="button" data-bs-toggle="modal" >Lacak Permohonan Dataset</button>
-                              <button class="btn btn-sm btn-outline-dark border-dark text-uppercase" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Permohonan Dataset</button>
+                              <button href="#formRequestDataset" class="btn btn-sm btn-outline-dark border-dark text-uppercase" type="button" data-bs-toggle="modal">Permohonan Dataset</button>
 
                            </div>
                         </div>
@@ -669,75 +669,81 @@
          </div>
       </div>
       <!-- Drop detail change modal -->
-      <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-hidden="true">
+      <div class="modal fade" id="formRequestDataset" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-hidden="true">
          <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content border-0 shadow overflow-hidden">
                <div class="modal-header px-4">
-                  <h5 class="h6 modal-title fw-bold">Add Drop Details</h5>
+                  <h5 class="h6 modal-title fw-bold">FORM REQUEST DATASET</h5>
                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                </div>
                <div class="modal-body p-4">
-                  <div class="bg-light rounded overflow-hidden border mb-4">
-                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d54776.1744782857!2d75.8216539883091!3d30.900340484153784!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391a837462345a7d%3A0x681102348ec60610!2sLudhiana%2C%20Punjab!5e0!3m2!1sen!2sin!4v1659863868963!5m2!1sen!2sin" height="150" class="border-0 w-100" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                     <div class="p-3">
-                        <div class="d-flex align-items-center gap-3">
-                           <i class="bi bi-pin-map h5 mb-0"></i>
-                           <div class="text-start">
-                              <h6 class="mb-1 fw-bold">Selected Location</h6>
-                              <div class="text-muted small text-opacity-50">925 S Chugach St #APT 10, Palmer, Alaska 99645, USA</div>
-                           </div>
-                           <i class="bi bi-check-circle-fill ms-auto"></i>
-                        </div>
-                     </div>
-                  </div>
                   <div class="row">
-                     <div class="col-6 mb-3">
-                        <label class="form-label">Flat, Floor, Building Name</label>
+                     <span class="text-danger fw-bold">IDENTITAS</span>
+                     <div class="col-12 mb-3 pt-3">
+                        <label class="form-label">Nama Lengkap</label>
                         <div class="input-group rounded overflow-hidden border">
-                           <span class="input-group-text bg-white border-0"><i class="bi bi-house-door-fill text-muted"></i></span>
-                           <input type="text" class="form-control bg-white border-0 ps-1" placeholder="e.g., 123, Bodegaa">
+                           <span class="input-group-text bg-white border-0"><i class="bi bi-person text-muted"></i></span>
+                           <input type="text" class="form-control bg-white border-0 ps-1" placeholder="Nama Lengkap">
                         </div>
                      </div>
-                     <div class="col-6 mb-3">
-                        <label class="form-label">How to Reach (Optoinal)</label>
+                     <div class="col-12 mb-3">
+                        <label class="form-label">Email</label>
                         <div class="input-group rounded overflow-hidden border">
-                           <span class="input-group-text bg-white border-0"><i class="bi bi-map-fill text-muted"></i></span>
-                           <input type="text" class="form-control bg-white border-0 ps-1" placeholder="e.g. Take Left">
+                           <span class="input-group-text bg-white border-0"><i class="bi bi-envelope text-muted"></i></span>
+                           <input type="text" class="form-control bg-white border-0 ps-1" placeholder="Email">
                         </div>
                      </div>
-                     <div class="col-6 mb-3">
-                        <label class="form-label">Contact Person Name</label>
+                     <div class="col-12 mb-3">
+                        <label class="form-label">No. Telp/Handphone</label>
                         <div class="input-group rounded overflow-hidden border">
-                           <span class="input-group-text bg-white border-0"><i class="bi bi-person-fill text-muted"></i></span>
-                           <input type="text" class="form-control bg-white border-0 ps-1" placeholder="e.g. Nikhal">
+                           <span class="input-group-text bg-white border-0"><i class="bi bi-telephone text-muted"></i></span>
+                           <input type="text" class="form-control bg-white border-0 ps-1" placeholder="No. Telp/HP">
                         </div>
                      </div>
-                     <div class="col-6 mb-3">
-                        <label class="form-label">Contact Number</label>
+
+                     <span class="text-danger fw-bold mt-3 pt-3 border-top">INFORMASI PEKERJAAN</span>
+                     <div class="col-12 mb-3 pt-3">
+                        <label class="form-label">Pekerjaan</label>
+                        <select class="form-select" aria-label="Default select example">
+                           <option value="1">Pelajar/Mahasiswa/Akademisi</option>
+                           <option value="2">Pemerintahan</option>
+                           <option value="3">Profesional</option>
+                           <option value="4">Wirausaha</option>
+                           <option value="5">Lainnya</option>
+                         </select>
+                     </div>
+
+                     <span class="text-danger fw-bold mt-3 pt-3 border-top">INFORMASI KEBUTUHAN DATASET</span>
+                     <div class="col-12 mb-3 pt-3">
+                        <label class="form-label">Judul dataset yang dimohon</label>
                         <div class="input-group rounded overflow-hidden border">
-                           <span class="input-group-text bg-white border-0"><i class="bi bi-telephone-fill text-muted"></i></span>
-                           <input type="text" class="form-control bg-white border-0 ps-1" placeholder="e.g. 12345678">
+                           <span class="input-group-text bg-white border-0"><i class="bi bi-file-earmark-ruled text-muted"></i></span>
+                           <input type="text" class="form-control bg-white border-0 ps-1" placeholder="Judul Dataset">
                         </div>
                      </div>
-                     <div class="col-12">
-                        <label class="form-label">Save Address As</label>
-                        <div class="row">
-                           <div class="col-auto"><input type="radio" class="btn-check" name="btnradio" id="btnradio133">
-                              <label class="btn btn-outline-secondary" for="btnradio133">Home</label>
-                           </div>
-                           <div class="col-auto px-0"><input type="radio" class="btn-check" name="btnradio" id="btnradio233">
-                              <label class="btn btn-outline-secondary" for="btnradio233">Office</label>
-                           </div>
-                           <div class="col-auto"><input type="radio" class="btn-check" name="btnradio" id="btnradio333">
-                              <label class="btn btn-outline-secondary" for="btnradio333">Other</label>
-                           </div>
-                        </div>
+                     <div class="col-12 mb-3">
+                        <label class="form-label">Tujuan Penggunaan Dataset</label>
+                        <select class="form-select" aria-label="Default select example">
+                           <option value="1">Referensi Kajian Bisnis</option>
+                           <option value="2">Referensi Pembuatan Kebijakan</option>
+                           <option value="3">Refernsi Pembuatan Kurikulum/Bahan Ajar</option>
+                           <option value="4">Referensi Tugas/Karya Ilmiah</option>
+                           <option value="5">Refernsi Pribadi</option>
+                           <option value="6">Lainnya</option>
+                         </select>
                      </div>
+
                   </div>
                </div>
                <div class="border-top d-flex">
-                  <button type="button" class="w-100 btn btn-lg py-4 border-0 btn-outline-danger rounded-0" data-bs-dismiss="modal">CLOSE</button>
-                  <button type="button" class="w-100 btn btn-lg py-4 border-0 btn-danger rounded-0" data-bs-dismiss="modal">SAVE ADDRESS</button>
+                  <div class="col-6 mt-3">
+                     <span class="ms-3 fw-bold">Hotline Satu Data Ogan Ilir</span>
+                     <ul>
+                        <li>Whatsapp : 0808-xxxx-xxxx</li>
+                        <li>Email : mail.satudata@mail.com</li>
+                     </ul>
+                  </div>
+                  <button type="button" class="w-100 btn btn-lg py-4 border-0 btn-danger rounded-0" data-bs-dismiss="modal">KIRIM PERMOHONAN</button>
                </div>
             </div>
          </div>
@@ -758,7 +764,7 @@
       </div>
       <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
          <div class="offcanvas-header border-bottom px-4">
-            <h6 class="offcanvas-title fw-bold" id="offcanvasRightLabel">Order #135071758810</h6>
+            <h6 class="offcanvas-title fw-bold" id="offcanvasRightLabel">FORM REQUEST DATASET</h6>
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
          </div>
          <div class="offcanvas-body p-4">
