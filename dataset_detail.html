@@ -5,7 +5,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
       <meta name="description" content="">
       <meta name="author" content="">
-      <link rel="icon" type="image/png" href="assets/img/opendata/fav-odat.png">
+      <link rel="icon" type="image/png" href="assets/img/opendata/fav.png">
       <title>Open Data Kabupaten Ogan Ilir</title>
       <!-- Bootstrap core CSS -->
       <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -27,8 +27,8 @@
       <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm osahan-header py-0">
          <div class="container">
             <a class="navbar-brand me-0 me-lg-3 me-md-3" href="index.html">
-               <img src="assets/img/opendata/opendata-logo.jpg" alt="#" class="img-fluid d-none d-md-block">
-               <img src="assets/img/opendata/fav-odat.png" alt="#" class="d-block d-md-none d-lg-none img-fluid">
+               <img src="assets/img/opendata/logo.png" alt="#" class="img-fluid d-none d-md-block">
+               <img src="assets/img/opendata/logo.png" alt="#" class="d-block d-md-none d-lg-none img-fluid">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -409,16 +409,36 @@
                                              <table id="timeSeries" class="display table table-striped table-bordered">
                                                 <thead class="bg-danger text-white">
                                                     <tr>
-                                                        <th>Name</th>
-                                                        <th>Position</th>
-                                                        <th>Office</th>
-                                                        <th>Age</th>
-                                                        <th>Start date</th>
-                                                        <th>Salary</th>
+                                                        <th rowspan="2">Name</th>
+                                                        <th rowspan="2">Position</th>
+                                                        <th colspan="3">Variabel Data</th>
+                                                        <th colspan="3">Variabel Data</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>2021</th>
+                                                        <th>2022</th>
+                                                        <th>2023</th>
+                                                        <th>2024</th>
+                                                        <th>2025</th>
+                                                        <th>2026</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
                                                     <tr>
+                                                      <th>
+                                                            <select id="multipSelect" multiple name="native-select" placeholder="Pilih" data-search="false" data-silent-initial-value-set="true">
+                                                               <option value="1">Option 1</option>
+                                                               <option value="2">Option 2</option>
+                                                               <option value="3">Option 3</option>
+                                                             </select>
+                                                      </th>
+                                                      <th>
+                                                            <select id="multipSelect" multiple name="native-select" placeholder="Pilih" data-search="false" data-silent-initial-value-set="true">
+                                                               <option value="1">Option 1</option>
+                                                               <option value="2">Option 2</option>
+                                                               <option value="3">Option 3</option>
+                                                             </select>
+                                                      </th>
                                                       <th>
                                                             <select id="multipSelect" multiple name="native-select" placeholder="Pilih" data-search="false" data-silent-initial-value-set="true">
                                                                <option value="1">Option 1</option>
@@ -470,12 +490,16 @@
                                                         <td>63</td>
                                                         <td>2011-07-25</td>
                                                         <td>$170,750</td>
+                                                        <td>2011-07-25</td>
+                                                        <td>$170,750</td>
                                                     </tr>
                                                     <tr>
                                                         <td>Ashton Cox</td>
                                                         <td>Junior Technical Author</td>
                                                         <td>San Francisco</td>
                                                         <td>66</td>
+                                                        <td>2009-01-12</td>
+                                                        <td>$86,000</td>
                                                         <td>2009-01-12</td>
                                                         <td>$86,000</td>
                                                     </tr>
@@ -486,12 +510,16 @@
                                                         <td>22</td>
                                                         <td>2012-03-29</td>
                                                         <td>$433,060</td>
+                                                        <td>2012-03-29</td>
+                                                        <td>$433,060</td>
                                                     </tr>
                                                     <tr>
                                                         <td>Airi Satou</td>
                                                         <td>Accountant</td>
                                                         <td>Tokyo</td>
                                                         <td>33</td>
+                                                        <td>2008-11-28</td>
+                                                        <td>$162,700</td>
                                                         <td>2008-11-28</td>
                                                         <td>$162,700</td>
                                                     </tr>
@@ -502,12 +530,16 @@
                                                         <td>61</td>
                                                         <td>2012-12-02</td>
                                                         <td>$372,000</td>
+                                                        <td>2012-12-02</td>
+                                                        <td>$372,000</td>
                                                     </tr>
                                                     <tr>
                                                         <td>Herrod Chandler</td>
                                                         <td>Sales Assistant</td>
                                                         <td>San Francisco</td>
                                                         <td>59</td>
+                                                        <td>2012-08-06</td>
+                                                        <td>$137,500</td>
                                                         <td>2012-08-06</td>
                                                         <td>$137,500</td>
                                                     </tr>
@@ -518,12 +550,16 @@
                                                         <td>55</td>
                                                         <td>2010-10-14</td>
                                                         <td>$327,900</td>
+                                                        <td>2010-10-14</td>
+                                                        <td>$327,900</td>
                                                     </tr>
                                                     <tr>
                                                         <td>Colleen Hurst</td>
                                                         <td>Javascript Developer</td>
                                                         <td>San Francisco</td>
                                                         <td>39</td>
+                                                        <td>2009-09-15</td>
+                                                        <td>$205,500</td>
                                                         <td>2009-09-15</td>
                                                         <td>$205,500</td>
                                                     </tr>
@@ -600,7 +636,7 @@
 
             <div class="row text-white mt-5">
                <div class="col-md-3 col-12">
-                  <div><img src="assets/img/opendata/opendata-logopng.png" alt="" class="img-fluid footer-logo"></div>
+                  <div><img src="assets/img/opendata/logo.png" alt="" class="img-fluid footer-logo"></div>
                </div>
                <div class="col-md-3 col-6">
                   <h6 class="text-uppercase mb-4 fw-bold">Open Data Ogan Ilir</h6>
@@ -631,9 +667,12 @@
             </div>
             <hr class="text-white">
             <div class="row mt-4">
-               <div class="col-12 text-white">
+               <div class="col-8 text-white">
                   <h6 class="fw-bold mb-2">Open Data Kabupaten Ogan Ilir</h6>
                   <p class="text-white-50 m-0">Copyright @ 2022 <span class="text-white">Pusat Data dan Informasi</span> | Dinas Komunikasi Informatika Statistik dan Persandian Kabupaten Ogan Ilir</p>
+               </div>
+               <div class="col-4 text-end align-items-center">
+                  <img src="assets/img/opendata/oibangkit.png" class="img-fluid w-25" alt="">
                </div>
             </div>
 
