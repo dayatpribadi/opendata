@@ -414,14 +414,14 @@ div.dataTables_wrapper .dataTables_filter input {
   border: 1px solid #aaa;
   border-radius: 3px;
   padding: 5px;
-  background-color: transparent;
+  background-color: #fff;
   margin-left: 3px;
 }
 div.dataTables_wrapper .dt-input {
   border: 1px solid #aaa;
   border-radius: 3px;
   padding: 5px;
-  background-color: transparent;
+  background-color: #fff;
 }
 div.dataTables_wrapper select.dt-input {
   padding: 4px;
