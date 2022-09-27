@@ -5,7 +5,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
       <meta name="description" content="">
       <meta name="author" content="">
-      <link rel="icon" type="image/png" href="assets/img/opendata/fav-odat.png">
+      <link rel="icon" type="image/png" href="assets/img/opendata/fav.png">
       <title>Open Data Kabupaten Ogan Ilir</title>
       <!-- Bootstrap core CSS -->
       <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -13,15 +13,12 @@
       <link href="assets/vendor/icons/icofont.min.css" rel="stylesheet" type="text/css">
       <!-- Bootstraps icon -->
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
-      <link rel="stylesheet" href="assets/vendor/multiselect/dist/css/bootstrap-multiselect.css">
-      <link href="assets/css/style.css" rel="stylesheet">
-      <link href="assets/css/custom.css" rel="stylesheet" >
-      <!-- Vendor Css -->
-      <link rel="stylesheet" href="assets/vendor/DataTables/DataTables-1.12.1/css/jquery-ui.css">
-      <link rel="stylesheet" href="assets/vendor/DataTables/DataTables-1.12.1/css/jquery.dataTables.css">
-      <link rel="stylesheet" href="assets/vendor/DataTables/DataTables-1.12.1/css/dataTables.jqueryui.css">
-      <link rel="stylesheet" href="assets/vendor/DataTables/DataTables-1.12.1/css/dataTables.dataTables.css">
-      
+      <link rel="stylesheet" href="assets/css/style.css">
+      <link rel="stylesheet" href="assets/css/custom.css" >
+
+      <link rel="stylesheet" href="assets/vendor/tables-data/datatables.min.css">
+
+      <link rel="stylesheet" href="assets/vendor/virtual-select-master/dist/virtual-select.min.css">
       <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.1/dist/leaflet.css" integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14=" crossorigin="" />
 
    </head>
@@ -30,8 +27,8 @@
       <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm osahan-header py-0">
          <div class="container">
             <a class="navbar-brand me-0 me-lg-3 me-md-3" href="index.html">
-               <img src="assets/img/opendata/opendata-logo.jpg" alt="#" class="img-fluid d-none d-md-block">
-               <img src="assets/img/opendata/fav-odat.png" alt="#" class="d-block d-md-none d-lg-none img-fluid">
+               <img src="assets/img/opendata/logo.png" alt="#" class="img-fluid d-none d-md-block">
+               <img src="assets/img/opendata/logo.png" alt="#" class="d-block d-md-none d-lg-none img-fluid">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -114,7 +111,7 @@
          </div>
       </div>
       <main >
-         <div class="bg-success">
+         <div class="bg-danger text-white">
             <div class="container py-4">
                <div class="row justify-content-between align-items-center">
                   <div class="col-md-7">
@@ -124,7 +121,7 @@
                            <p class="mb-4 text-white">Temukan kumpulan data-data mentah berupa tabel yang bisa diolah lebih lanjut di sini. Open Data Ogan Ilir menyediakan akses ke beragam koleksi dataset dari seluruh Organisasi Perangkat Daerah di Kabupaten Ogan Ilir.</p>
                            <div class="d-flex align-items-center gap-4">
                               <button href="#lacak__dataset" class="btn btn-sm btn-outline-light text-uppercase" type="button" data-bs-toggle="modal" >Lacak Permohonan Dataset</button>
-                              <button class="btn btn-sm btn-success border-success text-uppercase" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Permohonan Dataset</button>
+                              <button class="btn btn-sm btn-outline-dark border-dark text-uppercase" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Permohonan Dataset</button>
 
                            </div>
                         </div>
@@ -185,8 +182,8 @@
                                                    <a href="search_list.html" class="mb-0 text-danger text-decoration-none"><i class="bi bi-calendar me-1"></i>2021 - <b> 2026</b></a>
                                                 </div>
                                                 <div class="ms-auto text-end">
-                                                   <button class="btn btn-sm btn-outline-success text-uppercase me-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">PRATINJAU</button>
-                                                   <button class="btn btn-sm btn-success text-uppercase" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">LIHAT DATASET</button>
+                                                   <button class="btn btn-sm btn-outline-danger text-uppercase me-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">PRATINJAU</button>
+                                                   <button class="btn btn-sm btn-danger text-uppercase" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">LIHAT DATASET</button>
                                                 </div>
                                              </div>
                                           </div>
@@ -218,8 +215,8 @@
                                                    <a href="#" class="mb-0 text-danger text-decoration-none"><i class="bi bi-calendar me-1"></i>2021 - <b> 2026</b></a>
                                                 </div>
                                                 <div class="ms-auto text-end">
-                                                   <button class="btn btn-sm btn-outline-success text-uppercase me-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">PRATINJAU</button>
-                                                   <button class="btn btn-sm btn-success text-uppercase" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">LIHAT DATASET</button>
+                                                   <button class="btn btn-sm btn-outline-danger text-uppercase me-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">PRATINJAU</button>
+                                                   <button class="btn btn-sm btn-danger text-uppercase" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">LIHAT DATASET</button>
                                                 </div>
                                              </div>
                                           </div>
@@ -251,8 +248,8 @@
                                                    <a href="#" class="mb-0 text-danger text-decoration-none"><i class="bi bi-calendar me-1"></i>2021 - <b> 2026</b></a>
                                                 </div>
                                                 <div class="ms-auto text-end">
-                                                   <button class="btn btn-sm btn-outline-success text-uppercase me-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">PRATINJAU</button>
-                                                   <button class="btn btn-sm btn-success text-uppercase" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">LIHAT DATASET</button>
+                                                   <button class="btn btn-sm btn-outline-danger text-uppercase me-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">PRATINJAU</button>
+                                                   <button class="btn btn-sm btn-danger text-uppercase" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">LIHAT DATASET</button>
                                                 </div>
                                              </div>
                                           </div>
@@ -284,8 +281,8 @@
                                                    <a href="#" class="mb-0 text-danger text-decoration-none"><i class="bi bi-calendar me-1"></i>2021 - <b> 2026</b></a>
                                                 </div>
                                                 <div class="ms-auto text-end">
-                                                   <button class="btn btn-sm btn-outline-success text-uppercase me-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">PRATINJAU</button>
-                                                   <button class="btn btn-sm btn-success text-uppercase" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">LIHAT DATASET</button>
+                                                   <button class="btn btn-sm btn-outline-danger text-uppercase me-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">PRATINJAU</button>
+                                                   <button class="btn btn-sm btn-danger text-uppercase" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">LIHAT DATASET</button>
                                                 </div>
                                              </div>
                                           </div>
@@ -317,8 +314,8 @@
                                                    <a href="#" class="mb-0 text-danger text-decoration-none"><i class="bi bi-calendar me-1"></i>2021 - <b> 2026</b></a>
                                                 </div>
                                                 <div class="ms-auto text-end">
-                                                   <button class="btn btn-sm btn-outline-success text-uppercase me-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">PRATINJAU</button>
-                                                   <button class="btn btn-sm btn-success text-uppercase" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">LIHAT DATASET</button>
+                                                   <button class="btn btn-sm btn-outline-danger text-uppercase me-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">PRATINJAU</button>
+                                                   <button class="btn btn-sm btn-danger text-uppercase" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">LIHAT DATASET</button>
                                                 </div>
                                              </div>
                                           </div>
@@ -326,7 +323,7 @@
 
 
                                        <div class="col">
-                                          <button type="button" class="btn btn-outline-success btn-lg py-3 px-4 w-100">
+                                          <button type="button" class="btn btn-outline-danger btn-lg py-3 px-4 w-100">
                                           TAMPILKAN LEBIH BANYAK
                                           </button>
                                        </div>
@@ -397,7 +394,7 @@
 
             <div class="row text-white mt-5">
                <div class="col-md-3 col-12">
-                  <div><img src="assets/img/opendata/opendata-logopng.png" alt="" class="img-fluid footer-logo"></div>
+                  <div><img src="assets/img/opendata/logo.png" alt="" class="img-fluid footer-logo"></div>
                </div>
                <div class="col-md-3 col-6">
                   <h6 class="text-uppercase mb-4 fw-bold">Open Data Ogan Ilir</h6>
@@ -464,7 +461,7 @@
                                     </div>
                                  </div>
                               </form>
-                              <button class="btn btn-success btn-lg py-3 px-4 text-uppercase w-100 mt-4" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Lacak <i class="bi bi-arrow-right ms-2"></i></button>
+                              <button class="btn btn-danger btn-lg py-3 px-4 text-uppercase w-100 mt-4" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Lacak <i class="bi bi-arrow-right ms-2"></i></button>
                            </div>
                         </div>
                      </div>
@@ -509,7 +506,7 @@
                                     <label class="small text-muted">Resend OTP in 0:55</label>
                                  </div>
                               </form>
-                              <button class="btn btn-success btn-lg py-3 px-4 text-uppercase w-100 mt-4" data-bs-target="#exampleModalToggle3" data-bs-toggle="modal">Get OTP <i class="bi bi-arrow-right ms-2"></i></button>
+                              <button class="btn btn-danger btn-lg py-3 px-4 text-uppercase w-100 mt-4" data-bs-target="#exampleModalToggle3" data-bs-toggle="modal">Get OTP <i class="bi bi-arrow-right ms-2"></i></button>
                            </div>
                         </div>
                      </div>
@@ -541,7 +538,7 @@
                   </form>
                </div>
                <div class="modal-footer px-4 pb-4 pt-0 border-0">
-                  <button class="btn btn-success btn-lg py-3 px-4 text-uppercase  w-100 m-0" data-bs-target="#exampleModalToggle4" data-bs-toggle="modal">Claim Bodegaa Cash</button>
+                  <button class="btn btn-danger btn-lg py-3 px-4 text-uppercase  w-100 m-0" data-bs-target="#exampleModalToggle4" data-bs-toggle="modal">Claim Bodegaa Cash</button>
                </div>
             </div>
          </div>
@@ -569,7 +566,7 @@
                   </div>
                </div>
                <div class="modal-footer px-4 pb-4 pt-0 border-0">
-                  <a href="index.html" class="btn btn-success btn-lg py-3 px-4 text-uppercase w-100 m-0">Tap to order</a>
+                  <a href="index.html" class="btn btn-danger btn-lg py-3 px-4 text-uppercase w-100 m-0">Tap to order</a>
                </div>
             </div>
          </div>
@@ -662,8 +659,8 @@
                   </form>
                </div>
                <div class="border-top d-flex">
-                  <button type="button" class="w-100 btn btn-lg py-4 border-0 btn-outline-success rounded-0" data-bs-dismiss="modal">CANCEL</button>
-                  <button type="button" class="w-100 btn btn-lg py-4 border-0 btn-success rounded-0" data-bs-dismiss="modal">SAVE</button>
+                  <button type="button" class="w-100 btn btn-lg py-4 border-0 btn-outline-danger rounded-0" data-bs-dismiss="modal">CANCEL</button>
+                  <button type="button" class="w-100 btn btn-lg py-4 border-0 btn-danger rounded-0" data-bs-dismiss="modal">SAVE</button>
                </div>
             </div>
          </div>
@@ -736,8 +733,8 @@
                   </div>
                </div>
                <div class="border-top d-flex">
-                  <button type="button" class="w-100 btn btn-lg py-4 border-0 btn-outline-success rounded-0" data-bs-dismiss="modal">CLOSE</button>
-                  <button type="button" class="w-100 btn btn-lg py-4 border-0 btn-success rounded-0" data-bs-dismiss="modal">SAVE ADDRESS</button>
+                  <button type="button" class="w-100 btn btn-lg py-4 border-0 btn-outline-danger rounded-0" data-bs-dismiss="modal">CLOSE</button>
+                  <button type="button" class="w-100 btn btn-lg py-4 border-0 btn-danger rounded-0" data-bs-dismiss="modal">SAVE ADDRESS</button>
                </div>
             </div>
          </div>
@@ -866,11 +863,53 @@
          <a href="visualisasi.html"><span class="bi bi-file-earmark-bar-graph"></span> Visualisasi</a>
          <a data-bs-toggle="modal" href="#exampleModalToggle"><span class="bi bi-unlock-fill"></span> Sign In</a>
       </div>
-      <!-- Bootstrap core JavaScript -->
-      <script src="assets/vendor/jquery/jquery.min.js"></script>
-      <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
       <!-- Custom scripts for all pages-->
-      <script src="assets/js/custom.js"></script>
+      <script src="assets/vendor/bootstrap/js/bootstrap.min.js"></script>
+      <script src="assets/vendor/jquery/jquery.min.js"></script>
+
       <script src="https://js.hcaptcha.com/1/api.js" async defer></script>
+
+      <!-- Vendor Css -->
+      <script src="assets/vendor/tables-data/datatables.min.js"></script>
+       <script src="assets/vendor/tables-data/pdfmake.min.js"></script>
+       <script src="assets/vendor/tables-data/vfs_fonts.js"></script>
+
+      <!-- Data Leaflet -->
+      <script src="https://unpkg.com/leaflet@1.9.1/dist/leaflet.js" integrity="sha256-NDI0K41gVbWqfkkaHj15IzU7PtMoelkzyKp8TOaFQ3s=" crossorigin=""></script>
+      <script src="assets/vendor/leaflet/oganilir_residence.js"></script>
+
+      <!-- Data Grafik -->
+      <script src="assets/vendor/chart.js/dist/chart.min.js"></script>
+      <script src="assets/vendor/chart.js/dist/data-grafik.js"></script>
+
+      <script src="assets/vendor/virtual-select-master/dist/virtual-select.min.js"></script>
+
+      <script>
+         $(document).ready(function () {
+            $('#example2').DataTable({
+               scrollY: 300,
+               scrollX: true,
+            });
+          });
+      </script>
+
+      <script>
+         $(document).ready(function() {
+            var table = $('#example').DataTable({
+               buttons:['copy', 'csv','excel','pdf','print']
+            });
+
+            table.buttons().container()
+            .appendTo('#example_wrapper .col-md-6:eq(0)');
+         });
+      </script>
+
+      <script>
+         VirtualSelect.init({ 
+            ele: '#multipSelect' 
+         });
+      </script>
+      
+
    </body>
 </html>
