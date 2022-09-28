@@ -265,8 +265,20 @@ hr {
 	border-radius: 12px;
 }
 .form-select{
-   border-radius: 12px;
+   border-radius: 0;
+   border: none;
+   max-width: max-content;
+   overflow: hidden;
+   box-shadow: none;
 }
+
+.form-select .dropdown-item {
+	border: none;
+}
+.form-select:focus{
+	box-shadow: none;
+ }
+
 .form-control:focus {
 	border-color: #0ea8bd;
 }
@@ -302,7 +314,7 @@ hr {
 	border-radius: 7px;
 }
 .dropdown-menu .dropdown-item:hover, .dropdown-menu .dropdown-item:focus {
-	background-color: #02aabd;
+	background-color: #DA0037;
 	color: #fff;
 }
 .bg-success {
