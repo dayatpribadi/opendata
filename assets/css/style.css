@@ -267,7 +267,7 @@ hr {
 .form-select{
    border-radius: 0;
    border: none;
-   max-width: max-content;
+   max-width: 200px;
    overflow: hidden;
    box-shadow: none;
 }
