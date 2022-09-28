@@ -268,7 +268,7 @@ hr {
    border-radius: 0;
    border: none;
    max-width: 200px;
-   overflow: hidden;
+   overflow: auto;
    box-shadow: none;
 }
 
