@@ -199,8 +199,8 @@
                                                    <a href="search_list.html" class="mb-0 text-danger text-decoration-none"><i class="bi bi-calendar me-1"></i>2021 - <b> 2026</b></a>
                                                 </div>
                                                 <div class="ms-auto text-end">
-                                                   <button class="btn btn-sm btn-outline-danger text-uppercase me-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">PRATINJAU</button>
-                                                   <button class="btn btn-sm btn-danger text-uppercase" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">LIHAT DATASET</button>
+                                                   <button class="btn btn-sm btn-outline-danger text-uppercase me-2" type="button" data-bs-toggle="modal" href="#pratinjauDataset"><i class="bi bi-search me-2"></i>PRATINJAU</button>
+                                                   
                                                 </div>
                                              </div>
                                           </div>
@@ -232,8 +232,8 @@
                                                    <a href="#" class="mb-0 text-danger text-decoration-none"><i class="bi bi-calendar me-1"></i>2021 - <b> 2026</b></a>
                                                 </div>
                                                 <div class="ms-auto text-end">
-                                                   <button class="btn btn-sm btn-outline-danger text-uppercase me-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">PRATINJAU</button>
-                                                   <button class="btn btn-sm btn-danger text-uppercase" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">LIHAT DATASET</button>
+                                                   <button class="btn btn-sm btn-outline-danger text-uppercase me-2" type="button" data-bs-toggle="modal" href="#pratinjauDataset"><i class="bi bi-search me-2"></i>PRATINJAU</button>
+                                                   
                                                 </div>
                                              </div>
                                           </div>
@@ -265,8 +265,8 @@
                                                    <a href="#" class="mb-0 text-danger text-decoration-none"><i class="bi bi-calendar me-1"></i>2021 - <b> 2026</b></a>
                                                 </div>
                                                 <div class="ms-auto text-end">
-                                                   <button class="btn btn-sm btn-outline-danger text-uppercase me-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">PRATINJAU</button>
-                                                   <button class="btn btn-sm btn-danger text-uppercase" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">LIHAT DATASET</button>
+                                                   <button class="btn btn-sm btn-outline-danger text-uppercase me-2" type="button" data-bs-toggle="modal" href="#pratinjauDataset"><i class="bi bi-search me-2"></i>PRATINJAU</button>
+                                                   
                                                 </div>
                                              </div>
                                           </div>
@@ -298,8 +298,8 @@
                                                    <a href="#" class="mb-0 text-danger text-decoration-none"><i class="bi bi-calendar me-1"></i>2021 - <b> 2026</b></a>
                                                 </div>
                                                 <div class="ms-auto text-end">
-                                                   <button class="btn btn-sm btn-outline-danger text-uppercase me-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">PRATINJAU</button>
-                                                   <button class="btn btn-sm btn-danger text-uppercase" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">LIHAT DATASET</button>
+                                                   <button class="btn btn-sm btn-outline-danger text-uppercase me-2" type="button" data-bs-toggle="modal" href="#pratinjauDataset"><i class="bi bi-search me-2"></i>PRATINJAU</button>
+                                                   
                                                 </div>
                                              </div>
                                           </div>
@@ -331,8 +331,8 @@
                                                    <a href="#" class="mb-0 text-danger text-decoration-none"><i class="bi bi-calendar me-1"></i>2021 - <b> 2026</b></a>
                                                 </div>
                                                 <div class="ms-auto text-end">
-                                                   <button class="btn btn-sm btn-outline-danger text-uppercase me-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">PRATINJAU</button>
-                                                   <button class="btn btn-sm btn-danger text-uppercase" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">LIHAT DATASET</button>
+                                                   <button class="btn btn-sm btn-outline-danger text-uppercase me-2" type="button" data-bs-toggle="modal" href="#pratinjauDataset"><i class="bi bi-search me-2"></i>PRATINJAU</button>
+                                                   
                                                 </div>
                                              </div>
                                           </div>
@@ -654,38 +654,62 @@
             </div>
          </div>
       </div>
-      <!-- Edit profile Model -->
-      <div class="modal fade" id="staticBackdropep" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-hidden="true">
-         <div class="modal-dialog modal-dialog-centered">
+
+      <!-- START PRATINJAU DATASET -->
+      <div class="modal fade" id="pratinjauDataset" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-hidden="true">
+         <div class="modal-dialog modal-lg modal-dialog-centered">
             <div class="modal-content border-0 shadow overflow-hidden">
                <div class="modal-header px-4">
-                  <h5 class="h6 modal-title fw-bold">Edit Profile</h5>
+                  <img src="assets/img/opendata/data-kependudukan-oganilir.svg" class="img-fluid h-40 me-3 rounded" alt="">
+                  <h5 class="h6 modal-title fw-bold">Jumlah Produksi Telur Puyuh Berdasarkan Kecamatan</h5>
                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                </div>
                <div class="modal-body p-4">
-                  <form>
-                     <div class="mb-3">
-                        <label class="form-label">Your Name</label>
-                        <input type="text" class="form-control" placeholder="e.g. Rahul Mishra">
-                     </div>
-                     <div class="mb-3">
-                        <label class="form-label">Phone Number</label>
-                        <input type="number" class="form-control" placeholder="123456789">
-                     </div>
-                     <div>
-                        <label class="form-label">Email ID</label>
-                        <input type="email" class="form-control" placeholder="e.g. example@gmail.com">
-                     </div>
-                  </form>
+                  <span class="text-danger fw-bold">METADATA</span>
+                  <form class="my-3">
+                     <fieldset disabled>
+                        <div class="row">
+                           <div class="items_metadata py-0">
+                              <button type="button" class="btn mb-2">Dataset Diperbarui</button>
+                              <button type="button" class="btn mb-2">Dataset Dibuat</button>
+                              <button type="button" class="btn mb-2">Frekuensi</button>
+                           </div>
+                           <div class="items_metadata deskripsi_metadata py-2">
+                              <span class="mb-3">28 September 2022</span>
+                              <span class="mb-3">28 September 2021</span>
+                              <span class="mb-3">Tahunan</span>
+                           </div>
+                        </div>
+                     </fieldset>
+                   </form>
+
+                  <span class="text-danger fw-bold mt-5">FILE</span>
+                  <form class="mt-2">
+                     <fieldset disabled>
+                        <div class="row">
+                           <div class="items_metadata py-0">
+                              <button type="button" class="btn mb-2">Format Tersedia</button>
+                           </div>
+                           <div class="items_metadata deskripsi_metadata py-2">
+                              <span class="mb-3">Excel, CSV, APi</span>
+                           </div>
+                        </div>
+                     </fieldset>
+                   </form>
+
+                  <span class="text-danger fw-bold mt-3">Deskripsi</span>
+                  <p style="text-align: justify;" class="mt-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor dolore necessitatibus iste repellat, consectetur omnis eveniet provident, officiis laborum culpa pariatur nostrum eius dolores inventore similique enim cumque vitae molestias quis soluta nam! Quasi quam soluta ratione eos aliquid id, optio laudantium. Assumenda nulla libero inventore mollitia magnam, quibusdam vel doloribus, dolorum placeat quisquam quae id quia modi sit debitis animi excepturi iste maxime aperiam rem, cupiditate maiores quidem. Eius ab debitis illo expedita, perspiciatis recusandae, quo pariatur itaque excepturi harum sunt inventore. Assumenda sunt perferendis tempore ex, soluta molestiae natus quae eveniet dolorem aperiam atque veritatis numquam quia voluptate nihil consectetur quis iure voluptatum quam possimus laboriosam consequuntur voluptatibus aliquam quod? Nemo maxime incidunt ratione ab ut, inventore minima libero optio consequuntur quaerat? Quidem nisi vel enim distinctio! Modi excepturi assumenda eum ipsam eligendi, placeat odio voluptates, harum officiis quod ab exercitationem esse atque sed. Soluta exercitationem quos, architecto quibusdam quasi magni iure ad nisi adipisci quae? Nulla, perferendis consequuntur dolore incidunt animi officia doloribus in. Voluptatem nam natus optio laboriosam fuga explicabo nihil laudantium recusandae, placeat dolorem vero dolores. Minus adipisci cupiditate eligendi ipsam commodi libero ipsum magnam perspiciatis! Quos, delectus veritatis cum modi labore vero fuga aliquid.</p>
+
                </div>
                <div class="border-top d-flex">
-                  <button type="button" class="w-100 btn btn-lg py-4 border-0 btn-outline-danger rounded-0" data-bs-dismiss="modal">CANCEL</button>
-                  <button type="button" class="w-100 btn btn-lg py-4 border-0 btn-danger rounded-0" data-bs-dismiss="modal">SAVE</button>
+                  <button type="button" class="w-100 btn btn-lg py-4 border-0 btn-danger rounded-0" data-bs-dismiss="modal">LIHAT DATASET</button>
                </div>
             </div>
          </div>
       </div>
-      <!-- Drop detail change modal -->
+      <!-- END PRATINJAU DATASET -->
+
+      <!-- START MODAL REQUEST DATASET -->
       <div class="modal fade" id="formRequestDataset" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-hidden="true">
          <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content border-0 shadow overflow-hidden">
@@ -765,6 +789,8 @@
             </div>
          </div>
       </div>
+      <!-- END MODAL REQUEST DATASET -->
+
       <div class="modal fade" id="trashpop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-hidden="true">
          <div class="modal-dialog modal-sm modal-dialog-centered">
             <div class="modal-content border-0 shadow overflow-hidden">
@@ -779,6 +805,7 @@
             </div>
          </div>
       </div>
+
       <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
          <div class="offcanvas-header border-bottom px-4">
             <h6 class="offcanvas-title fw-bold" id="offcanvasRightLabel">FORM REQUEST DATASET</h6>
@@ -883,6 +910,7 @@
             </div>
          </div>
       </div>
+
       <div class="w-100 d-block d-md-none d-lg-none mobile-nav-bottom position-fixed d-flex align-items-center justify-content-around shadow-sm">
          <a href="index.html"><span class="bi bi-display"></span> Home</a>
          <a href="dataset.html"><span class="bi bi-file-earmark-spreadsheet"></span> Dataset</a>
