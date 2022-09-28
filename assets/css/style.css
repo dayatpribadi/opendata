@@ -267,10 +267,11 @@ hr {
 .form-select{
    border-radius: 0;
    border: none;
-   max-width: 200px;
-   overflow: auto;
+   max-width: max-content;
+   overflow: hidden;
    box-shadow: none;
 }
+
 
 .form-select .dropdown-item {
 	border: none;
