@@ -95,109 +95,251 @@
             </div>
          </div>
       </nav>
-      <!-- body -->
-      <div class="container py-3">
-         <div class="row">
-            <div class="col-12">
-               <nav>
-                  <ol class="breadcrumb small mb-0">
-                     <li class="breadcrumb-item"><a href="#" class="text-decoration-none text-success">Home</a></li>
-                     <li class="breadcrumb-item"><a href="#" class="text-decoration-none text-success">Organisasi</a></li>
-                  </ol>
-               </nav>
-            </div>
-         </div>
-      </div>
-      <div class="bg-danger text-white">
-         <div class="container">
-            <div class="row">
-               <div class="col-12">
-                  <div class="py-5 d-flex align-items-center gap-4">
-                     <div class="d-none d-md-block"><img alt="#" src="assets/img/opendata/visualisasi-data.svg" class="img-fluid ch-100"></div>
-                     <div class="text-md-start text-justify ps-2">
-                        <h1 class="mb-2 fw-bold">Organisasi</h1>
-                        <p class="m-0">Di halaman ini tersedia daftar Organisasi Perangkat Daerah (OPD) yang berkontribusi untuk membangun ekosistem data yang terbuka dan terpercaya melalui publikasi data di Open Data Ogan Ilir.</p>
+         <!-- Search -->
+         <div class="bg-danger text-white">
+            <div class="container py-4">
+               <div class="row align-items-center gap-2">
+                  <div class="col-12">
+                     <div class="d-flex gap-3 align-items-center">
+                        <div class="input-group input-group-lg border-0 p-1 bg-white shadow-sm rounded-3">
+                           <span class="input-group-text bg-white border-0"><i class="icofont-search"></i></span>
+                           <input type="text" class="form-control bg-white border-0 ps-0" placeholder="Cari data">
+                        </div>
+                        <a class="d-block text-decoration-none text-white" href="index.html">
+                           <div class="d-flex justify-content-center"><i class="bi bi-x-lg fs-3"></i></div>
+                           <p class="d-flex justify-content-center m-0">Close</p>
+                        </a>
                      </div>
                   </div>
                </div>
             </div>
          </div>
-      </div>
-      <!-- Body -->
+      </main>
+      <!-- body -->
       <div class="container py-5">
          <div class="row">
-            <div class="d-flex align-items-center justify-content-between mb-4">
-               <h6 class="mb-0 fw-bold">32 Organisasi ditemukan</h6>
-               <select class="mb-3 mb-md-0" id="multipSelect" multiple name="native-select" placeholder="Pilih" data-search="false" data-silent-initial-value-set="true">
-                  <option value="1" selected>Abjad</option>
-                  <option value="2">Dataset Terbanyak</option>
-                  <option value="3">Visualisasi Terbanyak</option>
-                </select>
-            </div>
-         </div>
+            <div class="col-lg-12">
+               <div class="row px-0 m-0">
+                  <div class="mb-4 text-center justify-content-between align-items-center d-block d-md-flex">
+                     <select class="mb-3 mb-md-0" id="multipSelect" multiple name="native-select" placeholder="Pilih" data-search="false" data-silent-initial-value-set="true">
+                        <option value="Geografi dan Iklim">Geografi dan Iklim</option>
+                        <option value="Harga-harga" selected>Harga-harga</option>
+                        <option value="Industri Manufaktur">Industri Manufaktur</option>
+                        <option value="Pariwisata">Pariwisata</option>
+                        <option value="Pemerintah">Pemerintah</option>
+                        <option value="Pendidikan">Pendidikan</option>
+                        <option value="Penduduk & Ketenagakerjaan">Penduduk & Ketenagakerjaan</option>
+                        <option value="Pengeluaran Penduduk">Pengeluaran Penduduk</option>
+                        <option value="Perbanding Antar Kabupaten">Perbanding Antar Kabupaten</option>
+                        <option value="Perdagangan Luar Negeri">Perdagangan Luar Negeri</option>
+                        <option value="Pertambangan & Energi">Pertambangan & Energi</option>
+                        <option value="Pertanian, Kehutanan, Peternakan & Perikanan">Pertanian, Kehutanan, Peternakan & Perikanan</option>
+                        <option value="Sistem Neraca Regional">Sistem Neraca Regional</option>
+                        <option value="Sosial & Kesejahteraan Rakyat">Sosial & Kesejahteraan Rakyat</option>
+                        <option value="Transportasi & Komunikasi">Transportasi & Komunikasi</option>
+                      </select>
+                     <select class="mb-3 mb-md-0" id="multipSelect" multiple name="native-select" placeholder="Pilih" data-search="false" data-silent-initial-value-set="true">
+                        <option value="1" selected>Dataset</option>
+                        <option value="2">Visualisasi</option>
+                        <option value="3">Infografik</option>
+                        <option value="3">Artikel</option>
+                      </select>
+                  </div>
+               </div>
+               <div class="shadow-sm bg-white rounded overflow-hidden border">
+                  <div class="p-0">
 
-         <div class="row row-cols-1 row-cols-md-3 row-cols-lg-4 g-4">
-            <div class="col">
-               <div class="bg-white listing-card listing-card-opd shadow-sm rounded-3 p-3 position-relative">
-                  <img src="assets/img/opendata/opd/bkd.png" class="img-fluid h-40 rounded-3" alt="trip">
-                  <div class="listing-card-body pt-3">
-                     <h6 class="card-title fw-bold mb-3">Badan Kepegawaian dan Pengembangan Sumber Daya Manusia</h6>
-                     <div class="d-flex gap-4">
-                        <p class="card-text text-muted mb-1"><i class="bi bi-journal-bookmark-fill me-1"></i>25</p>
-                        <p class="card-text text-muted mb-1"><i class="bi bi-graph-up me-1"></i>12</p>
-                     </div>
-                  </div>
-                  <a href="organisasi_detail.html" class="stretched-link"></a>
-               </div>
-            </div>
-            <div class="col">
-               <div class="bg-white listing-card listing-card-opd shadow-sm rounded-3 p-3 position-relative">
-                  <img src="assets/img/opendata/opd/bpbd.png" class="img-fluid h-40 rounded-3" alt="trip">
-                  <div class="listing-card-body pt-3">
-                     <h6 class="card-title fw-bold mb-3">Badan Penanggulangan Bencana Daerah</h6>
-                     <div class="d-flex gap-4">
-                        <p class="card-text text-muted mb-1"><i class="bi bi-journal-bookmark-fill me-1"></i>25</p>
-                        <p class="card-text text-muted mb-1"><i class="bi bi-graph-up me-1"></i>12</p>
-                     </div>
-                  </div>
-                  <a href="organisasi_detail.html" class="stretched-link"></a>
-               </div>
-            </div>
-            <div class="col">
-               <div class="bg-white listing-card listing-card-opd shadow-sm rounded-3 p-3 position-relative">
-                  <img src="assets/img/opendata/opd/damkar.png" class="img-fluid h-40 rounded-3" alt="trip">
-                  <div class="listing-card-body pt-3">
-                     <h6 class="card-title fw-bold mb-3">Dinas Pemadam Kebakaran</h6>
-                     <div class="d-flex gap-4">
-                        <p class="card-text text-muted mb-1"><i class="bi bi-journal-bookmark-fill me-1"></i>25</p>
-                        <p class="card-text text-muted mb-1"><i class="bi bi-graph-up me-1"></i>12</p>
-                     </div>
-                  </div>
-                  <a href="organisasi_detail.html" class="stretched-link"></a>
-               </div>
-            </div>
-            <div class="col">
-               <div class="bg-white listing-card listing-card-opd shadow-sm rounded-3 p-3 position-relative">
-                  <img src="assets/img/opendata/opd/logo-ori.png" class="img-fluid h-40 rounded-3" alt="trip">
-                  <div class="listing-card-body pt-3">
-                     <h6 class="card-title fw-bold mb-3">Dinas Komunikasi Informatika Statistik dan Persandian</h6>
-                     <div class="d-flex gap-4">
-                        <p class="card-text text-muted mb-1"><i class="bi bi-journal-bookmark-fill me-1"></i>25</p>
-                        <p class="card-text text-muted mb-1"><i class="bi bi-graph-up me-1"></i>12</p>
-                     </div>
-                  </div>
-                  <a href="organisasi_detail.html" class="stretched-link"></a>
-               </div>
-            </div>
+                     <div class="row px-0 m-0">
+                        <div class="col-12 col-md-12 px-0">
+                           <!-- 1st tab -->
+                           <div class="tab-content" id="v-pills-tabContent">
+                              <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+                                 <div class="p-4">
+                                    <div class="mb-4 text-center justify-content-between align-items-center d-block d-md-flex">
+                                       <h6 class="mb-3 mb-md-0 fw-bold me-md-5">3.059 Dataset ditemukan</h6>
+                                    </div>
+                                    <div class="row row-cols-1 row-cols-md-1 g-4">
+                                       <div class="col">
+                                          <div class="border rounded p-3 shadow-sm history-card">
+                                             <div class="d-flex gap-3 dataset__desk">
+                                                <img src="assets/img/list8.jpg" alt="" class="img-fluid rounded bg-light h-40">
+                                                <div class="text-start">
+                                                   <a href="dataset_detail.html" class="mb-1 fw-bold text-decoration-none">Jumlah Produksi Telur Puyuh Berdasarkan Kecamatan</a>
+                                                   <div class="row">
+                                                      <a href="organisasi_detail.html" class="text-muted small text-opacity-50 mb-1">
+                                                         <i class="bi bi-building me-1"></i>
+                                                         Dinas Ketahanan Pangan Dan Peternakan
+                                                      </a>                                                  
+                                                   </div>
+                                                </div>
+                                                <div class="ms-auto text-end">
+                                                   <small><i class="bi bi-eye-fill text-success"></i> 280 views </small>
+                                                   <p class="mb-0 small text-success">Sat, Jan 1, 2022, 03:46 PM</p>
+                                                </div>
+                                             </div>
+                                             <div class="d-flex align-items-center gap-3 border-top pt-3 mt-3">
+                                                <div class="text-start">
+                                                   <a href="search_list.html" class="mb-0 me-4 text-decoration-none text-muted">
+                                                      <span><i class="bi bi-bookmarks-fill me-1"></i></span>
+                                                      Ekonomi
+                                                   </a>
+                                                   <a href="search_list.html" class="mb-0 text-danger text-decoration-none"><i class="bi bi-calendar me-1"></i>2021 - <b> 2026</b></a>
+                                                </div>
+                                                <div class="ms-auto text-end">
+                                                   <button class="btn btn-sm btn-outline-danger text-uppercase me-2" type="button" data-bs-toggle="modal" href="#pratinjauDataset"><i class="bi bi-search me-2"></i>PRATINJAU</button>
+                                                   
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                       <div class="col">
+                                          <div class="border rounded p-3 shadow-sm history-card">
+                                             <div class="d-flex gap-3 dataset__desk">
+                                                <img src="assets/img/list8.jpg" alt="" class="img-fluid rounded bg-light h-40">
+                                                <div class="text-start">
+                                                   <a href="#" class="mb-1 fw-bold text-decoration-none">Jumlah Produksi Telur Puyuh Berdasarkan Kecamatan</a>
+                                                   <div class="row">
+                                                      <a href="#" class="text-muted small text-opacity-50 mb-1">
+                                                         <i class="bi bi-building me-1"></i>
+                                                         Dinas Ketahanan Pangan Dan Peternakan
+                                                      </a>                                                  
+                                                   </div>
+                                                </div>
+                                                <div class="ms-auto text-end">
+                                                   <small><i class="bi bi-eye-fill text-success"></i> 280 views </small>
+                                                   <p class="mb-0 small text-success">Sat, Jan 1, 2022, 03:46 PM</p>
+                                                </div>
+                                             </div>
+                                             <div class="d-flex align-items-center gap-3 border-top pt-3 mt-3">
+                                                <div class="text-start">
+                                                   <a href="#" class="mb-0 me-4 text-decoration-none text-muted">
+                                                      <span><i class="bi bi-bookmarks-fill me-1"></i></span>
+                                                      Ekonomi
+                                                   </a>
+                                                   <a href="#" class="mb-0 text-danger text-decoration-none"><i class="bi bi-calendar me-1"></i>2021 - <b> 2026</b></a>
+                                                </div>
+                                                <div class="ms-auto text-end">
+                                                   <button class="btn btn-sm btn-outline-danger text-uppercase me-2" type="button" data-bs-toggle="modal" href="#pratinjauDataset"><i class="bi bi-search me-2"></i>PRATINJAU</button>
+                                                   
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                       <div class="col">
+                                          <div class="border rounded p-3 shadow-sm history-card">
+                                             <div class="d-flex gap-3 dataset__desk">
+                                                <img src="assets/img/list8.jpg" alt="" class="img-fluid rounded bg-light h-40">
+                                                <div class="text-start">
+                                                   <a href="#" class="mb-1 fw-bold text-decoration-none">Jumlah Produksi Telur Puyuh Berdasarkan Kecamatan</a>
+                                                   <div class="row">
+                                                      <a href="#" class="text-muted small text-opacity-50 mb-1">
+                                                         <i class="bi bi-building me-1"></i>
+                                                         Dinas Ketahanan Pangan Dan Peternakan
+                                                      </a>                                                  
+                                                   </div>
+                                                </div>
+                                                <div class="ms-auto text-end">
+                                                   <small><i class="bi bi-eye-fill text-success"></i> 280 views </small>
+                                                   <p class="mb-0 small text-success">Sat, Jan 1, 2022, 03:46 PM</p>
+                                                </div>
+                                             </div>
+                                             <div class="d-flex align-items-center gap-3 border-top pt-3 mt-3">
+                                                <div class="text-start">
+                                                   <a href="#" class="mb-0 me-4 text-decoration-none text-muted">
+                                                      <span><i class="bi bi-bookmarks-fill me-1"></i></span>
+                                                      Ekonomi
+                                                   </a>
+                                                   <a href="#" class="mb-0 text-danger text-decoration-none"><i class="bi bi-calendar me-1"></i>2021 - <b> 2026</b></a>
+                                                </div>
+                                                <div class="ms-auto text-end">
+                                                   <button class="btn btn-sm btn-outline-danger text-uppercase me-2" type="button" data-bs-toggle="modal" href="#pratinjauDataset"><i class="bi bi-search me-2"></i>PRATINJAU</button>
+                                                   
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                       <div class="col">
+                                          <div class="border rounded p-3 shadow-sm history-card">
+                                             <div class="d-flex gap-3 dataset__desk">
+                                                <img src="assets/img/list8.jpg" alt="" class="img-fluid rounded bg-light h-40">
+                                                <div class="text-start">
+                                                   <a href="#" class="mb-1 fw-bold text-decoration-none">Jumlah Produksi Telur Puyuh Berdasarkan Kecamatan</a>
+                                                   <div class="row">
+                                                      <a href="#" class="text-muted small text-opacity-50 mb-1">
+                                                         <i class="bi bi-building me-1"></i>
+                                                         Dinas Ketahanan Pangan Dan Peternakan
+                                                      </a>                                                  
+                                                   </div>
+                                                </div>
+                                                <div class="ms-auto text-end">
+                                                   <small><i class="bi bi-eye-fill text-success"></i> 280 views </small>
+                                                   <p class="mb-0 small text-success">Sat, Jan 1, 2022, 03:46 PM</p>
+                                                </div>
+                                             </div>
+                                             <div class="d-flex align-items-center gap-3 border-top pt-3 mt-3">
+                                                <div class="text-start">
+                                                   <a href="#" class="mb-0 me-4 text-decoration-none text-muted">
+                                                      <span><i class="bi bi-bookmarks-fill me-1"></i></span>
+                                                      Ekonomi
+                                                   </a>
+                                                   <a href="#" class="mb-0 text-danger text-decoration-none"><i class="bi bi-calendar me-1"></i>2021 - <b> 2026</b></a>
+                                                </div>
+                                                <div class="ms-auto text-end">
+                                                   <button class="btn btn-sm btn-outline-danger text-uppercase me-2" type="button" data-bs-toggle="modal" href="#pratinjauDataset"><i class="bi bi-search me-2"></i>PRATINJAU</button>
+                                                   
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                       <div class="col">
+                                          <div class="border rounded p-3 shadow-sm history-card">
+                                             <div class="d-flex gap-3 dataset__desk">
+                                                <img src="assets/img/list8.jpg" alt="" class="img-fluid rounded bg-light h-40">
+                                                <div class="text-start">
+                                                   <a href="#" class="mb-1 fw-bold text-decoration-none">Jumlah Produksi Telur Puyuh Berdasarkan Kecamatan</a>
+                                                   <div class="row">
+                                                      <a href="#" class="text-muted small text-opacity-50 mb-1">
+                                                         <i class="bi bi-building me-1"></i>
+                                                         Dinas Ketahanan Pangan Dan Peternakan
+                                                      </a>                                                  
+                                                   </div>
+                                                </div>
+                                                <div class="ms-auto text-end">
+                                                   <small><i class="bi bi-eye-fill text-success"></i> 280 views </small>
+                                                   <p class="mb-0 small text-success">Sat, Jan 1, 2022, 03:46 PM</p>
+                                                </div>
+                                             </div>
+                                             <div class="d-flex align-items-center gap-3 border-top pt-3 mt-3">
+                                                <div class="text-start">
+                                                   <a href="#" class="mb-0 me-4 text-decoration-none text-muted">
+                                                      <span><i class="bi bi-bookmarks-fill me-1"></i></span>
+                                                      Ekonomi
+                                                   </a>
+                                                   <a href="#" class="mb-0 text-danger text-decoration-none"><i class="bi bi-calendar me-1"></i>2021 - <b> 2026</b></a>
+                                                </div>
+                                                <div class="ms-auto text-end">
+                                                   <button class="btn btn-sm btn-outline-danger text-uppercase me-2" type="button" data-bs-toggle="modal" href="#pratinjauDataset"><i class="bi bi-search me-2"></i>PRATINJAU</button>
+                                                   
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
 
 
-         </div>
-         <!-- pagination -->
-         <div class="text-center mt-5">
-            <div class="spinner-border" role="status">
-               <span class="visually-hidden">Loading...</span>
+                                       <div class="col">
+                                          <button type="button" class="btn btn-outline-danger btn-lg py-3 px-4 w-100">
+                                          TAMPILKAN LEBIH BANYAK
+                                          </button>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
             </div>
-            <p class="mb-0 mt-2">Loading</p>
          </div>
       </div>
       <!-- Footer -->
@@ -256,7 +398,7 @@
 
             <div class="row text-white mb-3">
                <div class="col-md-3 col-12">
-                  <div><img src="assets/img/opendata/opendata-logopng.png" alt="" class="img-fluid footer-logo mb-5"></div>
+                  <div><img src="assets/img/opendata/logo.png" alt="" class="img-fluid footer-logo mb-5"></div>
                </div>
                <div class="col-md-3 col-6">
                   <h6 class="text-uppercase mb-4 fw-bold">Satu Data Ogan Ilir</h6>

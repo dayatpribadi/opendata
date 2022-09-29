@@ -66,6 +66,7 @@ body {
 }
 .listing-card{
    border: 1px solid #ffffff !important;
+   height: 200px;
 }
 .listing-card:hover{
    border: 1px solid #02aabd !important;
@@ -635,7 +636,10 @@ hr {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+
 }
+
+
 
 /* Mobile Media */
 @media(max-width: 576px) {
