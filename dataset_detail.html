@@ -171,13 +171,13 @@
                      <div class="col-md-6">
                         <div class="d-flex align-items-center justify-content-between gap-3 mt-3 mb-4">
                            <ul class="nav nav-pills nav-fill mb-3" id="pills-tab" id="formTabs" role="tablist">
-                              <li class="nav-item" role="presentation">
-                                <span class="nav-link active" id="step1-tab" role="tab" data-bs-toggle="tab" data-bs-target='#step1-tab-pane' aria-controls="step1-tab-pane" aria-selected="true">
+                              <li class="nav-item me-3" role="presentation">
+                                <span class="nav-link active bg-danger text-white" id="step1-tab" role="tab" data-bs-toggle="tab" data-bs-target='#step1-tab-pane' aria-controls="step1-tab-pane" aria-selected="true">
                                   <span>Data</span>
                                </span>
                               </li>
                               <li class="nav-item" role="presentation">
-                                <span class="nav-link" id="step2-tab" role="tab" data-bs-toggle="tab" data-bs-target='#step2-tab-pane'  aria-controls="step2-tab-pane" aria-selected="false">
+                                <span class="nav-link bg-danger text-white" id="step2-tab" role="tab" data-bs-toggle="tab" data-bs-target='#step2-tab-pane'  aria-controls="step2-tab-pane" aria-selected="false">
                                   <span>Metadata</span>
                                </span>
                               </li>
@@ -205,18 +205,65 @@
                         <div class="tab-content" id="formTabsContent">
                            <div class="tab-pane fade active show" id="step1-tab-pane" role="tabpanel" aria-labelledby="step1-tab" tabindex="0">
                               <h6>Deskripsi Dataset</h6>
-                              <p class="text-muted mb-0" style="text-align: justify;">The product image(s) shown are representative of the actual product. It is recommended to read the labels, batch details, manufacturing details, expiration date, list of ingredients, directions, and warnings, etc., as contained in the actual product label before consuming or utilizing the product. For other information, please contact the merchant or the manufacturer through the contact details as provided on the label.</p>
+                              <p class="text-muted mb-5" style="text-align: justify;">The product image(s) shown are representative of the actual product. It is recommended to read the labels, batch details, manufacturing details, expiration date, list of ingredients, directions, and warnings, etc., as contained in the actual product label before consuming or utilizing the product. For other information, please contact the merchant or the manufacturer through the contact details as provided on the label.</p>
                               <div class="mb-3 d-flex justify-content-end">
                                  <a class="btn btn-yellow btn-tab" data-bs-toggle="tab" data-bs-target="#step2-tab"><span>Metadata</span></a>
                               </div>
                            </div>
                            <div class="tab-pane fade" id="step2-tab-pane" role="tabpanel" aria-labelledby="step2-tab" tabindex="0">
-                              <h6>Deskripsi Dataset</h6>
-                              <p class="text-muted mb-0" style="text-align: justify;">The product image(s) shown are representative of the actual product. It is recommended to read the labels, batch details, manufacturing details, expiration date, list of ingredients, directions, and warnings, etc., as contained in the actual product label before consuming or utilizing the product. For other information, please contact the merchant or the manufacturer through the contact details as provided on the label.</p>
-                              <div class="mb-3 d-flex justify-content-between">
-                              <a class="btn btn-yellow btn-tab" data-bs-toggle="tab" data-bs-target="#step1-tab"><span>Data</span></a>
+                              <img src="assets/img/opendata/data-kependudukan-oganilir.svg" class="img-fluid h-40 me-3 rounded" alt="">
+                              <h5 class="h6 modal-title fw-bold">Jumlah Produksi Telur Puyuh Berdasarkan Kecamatan</h5>
+                              <span class="text-danger fw-bold">METADATA</span>
+                              <form class="my-3">
+                                 <fieldset disabled>
+                                    <div class="row">
+                                       <div class="items_metadata py-0">
+                                          <button type="button" class="btn mb-2">Dataset Diperbarui</button>
+                                          <button type="button" class="btn mb-2">Dataset Dibuat</button>
+                                          <button type="button" class="btn mb-2">Pengukuran Dataset</button>
+                                          <button type="button" class="btn mb-2">Tingkat Pengukuran Dataset</button>
+                                          <button type="button" class="btn mb-2">Cakupan Dataset</button>
+                                          <button type="button" class="btn mb-2">Produsen</button>
+                                          <button type="button" class="btn mb-2">Bidang</button>
+                                          <button type="button" class="btn mb-2">Penanggung Jawab</button>
+                                          <button type="button" class="btn mb-2">Kontak Produsen</button>
+                                          <button type="button" class="btn mb-2">Satuan Dataset</button>
+                                          <button type="button" class="btn mb-2">Frekuensi Dataset</button>
+                                          <button type="button" class="btn mb-2">Dimensi Dataset</button>
+                                       </div>
+                                       <div class="items_metadata deskripsi_metadata py-2">
+                                          <span>28 September 2022</span>
+                                          <span>28 September 2021</span>
+                                          <span>Jumlah Produksi Telur</span>
+                                          <span>Produksi Peternakan</span>
+                                          <span>Seluruh Peternakan di Kabupaten Ogan Ilir</span>
+                                          <span>Dinas Peternakan</span>
+                                          <span>-</span>
+                                          <span>-</span>
+                                          <span>email @dinas.peternakan.com</span>
+                                          <span>Butir</span>
+                                          <span>Tahunan</span>
+                                          <span>2021 - 2022</span>
+                                       </div>
+                                    </div>
+                                 </fieldset>
+                               </form>
+            
+                              <span class="text-danger fw-bold mt-5">FILE</span>
+                              <form class="mt-2">
+                                 <fieldset disabled>
+                                    <div class="row">
+                                       <div class="items_metadata py-0">
+                                          <button type="button" class="btn mb-2">Format Tersedia</button>
+                                       </div>
+                                       <div class="items_metadata deskripsi_metadata py-2">
+                                          <span class="mb-3">Excel, CSV, APi</span>
+                                       </div>
+                                    </div>
+                                 </fieldset>
+                               </form>
+
                               
-                              </div>
                            </div>
                         </div>
                      </div>
