@@ -51,14 +51,14 @@ div.dataTables_wrapper {
     align-items: flex-end;
 }
 
-/* .listing-card-opd {
+.listing-card-opd {
     width: 100%;
-    height: 300px;
+    height: 200px;
     overflow: hidden;
     
-
 }
-.listing-card-opd img {
+
+/* .listing-card-opd img {
     height: 50%;
     width: min-content;
 } */

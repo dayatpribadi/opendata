@@ -13,8 +13,14 @@
       <link href="assets/vendor/icons/icofont.min.css" rel="stylesheet" type="text/css">
       <!-- Bootstraps icon -->
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
-      <link href="assets/css/style.css" rel="stylesheet">
-      <link href="assets/css/custom.css" rel="stylesheet" >
+      <link rel="stylesheet" href="assets/css/style.css">
+      <link rel="stylesheet" href="assets/css/custom.css" >
+
+      <link rel="stylesheet" href="assets/vendor/tables-data/datatables.min.css">
+
+      <link rel="stylesheet" href="assets/vendor/virtual-select-master/dist/virtual-select.min.css">
+      <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.1/dist/leaflet.css" integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14=" crossorigin="" />
+
    </head>
    <body class="bg-light">
       <!-- Navbar -->
@@ -129,6 +135,19 @@
       </main>
       <!-- body -->
       <div class="container py-5">
+         <!-- search -->
+         <div class="row">
+            <div class="col-12">
+               <div class="d-flex gap-3 align-items-center mb-4">
+                  <div class="input-group input-group-lg border bg-white shadow-sm rounded-3">
+                     <span class="input-group-text bg-white border-0"><i class="icofont-search"></i></span>
+                     <input type="text" class="form-control bg-white border-0 ps-0" placeholder="Cari Artikel">
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!-- End Search -->
+
          <div class="row">
             <div class="col-lg-12">
                <div class="shadow-sm bg-white rounded overflow-hidden border">
@@ -140,8 +159,13 @@
                            <div class="tab-content" id="v-pills-tabContent">
                               <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
                                  <div class="p-4">
-                                    <div class="mb-4">
-                                       <h6 class="mb-0 fw-bold">3.059 Artikel ditemukan</h6>
+                                    <div class="d-flex align-items-center justify-content-between mb-4">
+                                       <h6 class="mb-0 fw-bold">12 Artikel ditemukan</h6>
+                                       <select class="mb-3 mb-md-0" id="multipSelect" multiple name="native-select" placeholder="Pilih" data-search="false" data-silent-initial-value-set="true">
+                                          <option value="1">Abjad</option>
+                                          <option value="2" selected>Terbaru</option>
+                                          <option value="3">Terpopuler</option>
+                                        </select>
                                     </div>
                                     <div class="row row-cols-1 row-cols-md-1 g-4">
                                        <div class="col">
@@ -165,7 +189,7 @@
                                              <div class="d-flex align-items-center gap-3 border-top pt-3 mt-3">
                                                 
                                                 <div class="ms-auto text-end">
-                                                   <button class="btn btn-sm btn-outline-danger text-uppercase" type="button">LIHAT ARTIKEL</button>
+                                                   <button class="btn btn-sm btn-outline-danger text-uppercase me-2" type="button" data-bs-toggle="modal" href="#pratinjauDataset"><i class="bi bi-search me-2"></i>PRATINJAU</button>
                                                    
                                                 </div>
                                              </div>
@@ -192,7 +216,7 @@
                                              <div class="d-flex align-items-center gap-3 border-top pt-3 mt-3">
                                                 
                                                 <div class="ms-auto text-end">
-                                                   <button class="btn btn-sm btn-outline-danger text-uppercase" type="button">LIHAT ARTIKEL</button>
+                                                   <button class="btn btn-sm btn-outline-danger text-uppercase me-2" type="button" data-bs-toggle="modal" href="#pratinjauDataset"><i class="bi bi-search me-2"></i>PRATINJAU</button>
                                                    
                                                 </div>
                                              </div>
@@ -219,7 +243,7 @@
                                              <div class="d-flex align-items-center gap-3 border-top pt-3 mt-3">
                                                 
                                                 <div class="ms-auto text-end">
-                                                   <button class="btn btn-sm btn-outline-danger text-uppercase" type="button">LIHAT ARTIKEL</button>
+                                                   <button class="btn btn-sm btn-outline-danger text-uppercase me-2" type="button" data-bs-toggle="modal" href="#pratinjauDataset"><i class="bi bi-search me-2"></i>PRATINJAU</button>
                                                    
                                                 </div>
                                              </div>
@@ -246,7 +270,7 @@
                                              <div class="d-flex align-items-center gap-3 border-top pt-3 mt-3">
                                                 
                                                 <div class="ms-auto text-end">
-                                                   <button class="btn btn-sm btn-outline-danger text-uppercase" type="button">LIHAT ARTIKEL</button>
+                                                   <button class="btn btn-sm btn-outline-danger text-uppercase me-2" type="button" data-bs-toggle="modal" href="#pratinjauDataset"><i class="bi bi-search me-2"></i>PRATINJAU</button>
                                                    
                                                 </div>
                                              </div>
@@ -269,8 +293,10 @@
             </div>
          </div>
       </div>
+
+
       <!-- Footer -->
-      <div class="footer py-5 d-none d-md-block">
+      <div class="footer py-5  d-none d-md-block">
          <div class="container">
             <div class="row">
                <h5 class="mb-4 fw-bold text-dark">Areas we deliver to</h5>
@@ -367,9 +393,9 @@
 
          </div>
       </footer>
-      <!-- Sign in Modal -->
+      <!-- LACAK PERMOHONAN DATASET -->
       <!-- 1st -->
-      <div class="modal fade" id="exampleModalToggle" aria-hidden="true" tabindex="-1">
+      <div class="modal fade" id="lacak__dataset" aria-hidden="true" tabindex="-1">
          <div class="modal-dialog modal-lg modal-dialog-centered login-popup-main">
             <div class="modal-content border-0 shadow overflow-hidden rounded">
                <div class="modal-body p-0">
@@ -380,21 +406,22 @@
                         <div class="col-md-8 col-lg-8 py-lg-5">
                            <div class="login p-5">
                               <div class="mb-4 pb-2">
-                                 <h5 class="mb-2 fw-bold">Hey! what’s your number?</h5>
-                                 <p class="text-muted mb-0">Please login with this number the next time you sign-in</p>
+                                 <h5 class="mb-2 fw-bold">Lacak Permohonan Dataset</h5>
+                                 <p class="text-muted mb-0">Silakan masukkan Nomor Tiket Permohonan. Kemudian Klik 'Lacak'.</p>
                               </div>
                               <form>
-                                 <div class="input-group bg-white border rounded mb-3 p-2">
-                                    <span class="input-group-text bg-white border-0"><i class="bi bi-phone pe-2"></i> +91 </span>
-                                    <input type="text" class="form-control bg-white border-0 ps-0" placeholder="Enter phone number">
+                                 <div class="input-group bg-white border rounded mb-2 p-2">
+                                    <span class="input-group-text bg-white border-0"><i class="bi bi-phone pe-2"></i> </span>
+                                    <input type="text" class="form-control bg-white border-0 ps-0" placeholder="Nomor Tiket">
                                  </div>
-                                 <div class="form-check">
-                                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                                    <label class="form-check-label small text-muted border-end pe-1" for="exampleCheck1">I accept the Terms of use & Privacy Policy</label>
-                                    <a href="#" class="text-decoration-none text-success small">View T&C <i class="bi bi-chevron-right"></i></a>
+                                 <div class="input-group mb-2">
+                                    <!-- reChaptca -->
+                                    <div class="input-group col-lg-12 my-3">
+                                       <div class="h-captcha" data-sitekey="e9193e57-57c7-4074-9503-aed631803f25"></div>
+                                    </div>
                                  </div>
                               </form>
-                              <button class="btn btn-success btn-lg py-3 px-4 text-uppercase w-100 mt-4" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Get OTP <i class="bi bi-arrow-right ms-2"></i></button>
+                              <button class="btn btn-danger btn-lg py-3 px-4 text-uppercase w-100 mt-4" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Lacak <i class="bi bi-arrow-right ms-2"></i></button>
                            </div>
                         </div>
                      </div>
@@ -403,6 +430,8 @@
             </div>
          </div>
       </div>
+      <!-- END LACAK PERMOHONAN DATASET -->
+
       <!-- 2nd -->
       <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" tabindex="-1">
          <div class="modal-dialog modal-lg modal-dialog-centered login-popup-main">
@@ -439,7 +468,7 @@
                                     <label class="small text-muted">Resend OTP in 0:55</label>
                                  </div>
                               </form>
-                              <button class="btn btn-success btn-lg py-3 px-4 text-uppercase w-100 mt-4" data-bs-target="#exampleModalToggle3" data-bs-toggle="modal">Get OTP <i class="bi bi-arrow-right ms-2"></i></button>
+                              <button class="btn btn-danger btn-lg py-3 px-4 text-uppercase w-100 mt-4" data-bs-target="#exampleModalToggle3" data-bs-toggle="modal">Get OTP <i class="bi bi-arrow-right ms-2"></i></button>
                            </div>
                         </div>
                      </div>
@@ -471,7 +500,7 @@
                   </form>
                </div>
                <div class="modal-footer px-4 pb-4 pt-0 border-0">
-                  <button class="btn btn-success btn-lg py-3 px-4 text-uppercase  w-100 m-0" data-bs-target="#exampleModalToggle4" data-bs-toggle="modal">Claim Bodegaa Cash</button>
+                  <button class="btn btn-danger btn-lg py-3 px-4 text-uppercase  w-100 m-0" data-bs-target="#exampleModalToggle4" data-bs-toggle="modal">Claim Bodegaa Cash</button>
                </div>
             </div>
          </div>
@@ -499,7 +528,7 @@
                   </div>
                </div>
                <div class="modal-footer px-4 pb-4 pt-0 border-0">
-                  <a href="index.html" class="btn btn-success btn-lg py-3 px-4 text-uppercase w-100 m-0">Tap to order</a>
+                  <a href="index.html" class="btn btn-danger btn-lg py-3 px-4 text-uppercase w-100 m-0">Tap to order</a>
                </div>
             </div>
          </div>
@@ -567,111 +596,143 @@
             </div>
          </div>
       </div>
-      <!-- Edit profile Model -->
-      <div class="modal fade" id="staticBackdropep" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-hidden="true">
-         <div class="modal-dialog modal-dialog-centered">
+
+      <!-- START PRATINJAU DATASET -->
+      <div class="modal fade" id="pratinjauDataset" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-hidden="true">
+         <div class="modal-dialog modal-lg modal-dialog-centered">
             <div class="modal-content border-0 shadow overflow-hidden">
                <div class="modal-header px-4">
-                  <h5 class="h6 modal-title fw-bold">Edit Profile</h5>
+                  <img src="assets/img/opendata/data-kependudukan-oganilir.svg" class="img-fluid h-40 me-3 rounded" alt="">
+                  <h5 class="h6 modal-title fw-bold">Jumlah Produksi Telur Puyuh Berdasarkan Kecamatan</h5>
                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                </div>
                <div class="modal-body p-4">
-                  <form>
-                     <div class="mb-3">
-                        <label class="form-label">Your Name</label>
-                        <input type="text" class="form-control" placeholder="e.g. Rahul Mishra">
-                     </div>
-                     <div class="mb-3">
-                        <label class="form-label">Phone Number</label>
-                        <input type="number" class="form-control" placeholder="123456789">
-                     </div>
-                     <div>
-                        <label class="form-label">Email ID</label>
-                        <input type="email" class="form-control" placeholder="e.g. example@gmail.com">
-                     </div>
-                  </form>
-               </div>
-               <div class="border-top d-flex">
-                  <button type="button" class="w-100 btn btn-lg py-4 border-0 btn-outline-danger rounded-0" data-bs-dismiss="modal">CANCEL</button>
-                  <button type="button" class="w-100 btn btn-lg py-4 border-0 btn-success rounded-0" data-bs-dismiss="modal">SAVE</button>
-               </div>
-            </div>
-         </div>
-      </div>
-      <!-- Drop detail change modal -->
-      <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-hidden="true">
-         <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content border-0 shadow overflow-hidden">
-               <div class="modal-header px-4">
-                  <h5 class="h6 modal-title fw-bold">Add Drop Details</h5>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-               </div>
-               <div class="modal-body p-4">
-                  <div class="bg-light rounded overflow-hidden border mb-4">
-                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d54776.1744782857!2d75.8216539883091!3d30.900340484153784!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391a837462345a7d%3A0x681102348ec60610!2sLudhiana%2C%20Punjab!5e0!3m2!1sen!2sin!4v1659863868963!5m2!1sen!2sin" height="150" class="border-0 w-100" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                     <div class="p-3">
-                        <div class="d-flex align-items-center gap-3">
-                           <i class="bi bi-pin-map h5 mb-0"></i>
-                           <div class="text-start">
-                              <h6 class="mb-1 fw-bold">Selected Location</h6>
-                              <div class="text-muted small text-opacity-50">925 S Chugach St #APT 10, Palmer, Alaska 99645, USA</div>
-                           </div>
-                           <i class="bi bi-check-circle-fill ms-auto"></i>
-                        </div>
-                     </div>
-                  </div>
-                  <div class="row">
-                     <div class="col-6 mb-3">
-                        <label class="form-label">Flat, Floor, Building Name</label>
-                        <div class="input-group rounded overflow-hidden border">
-                           <span class="input-group-text bg-white border-0"><i class="bi bi-house-door-fill text-muted"></i></span>
-                           <input type="text" class="form-control bg-white border-0 ps-1" placeholder="e.g., 123, Bodegaa">
-                        </div>
-                     </div>
-                     <div class="col-6 mb-3">
-                        <label class="form-label">How to Reach (Optoinal)</label>
-                        <div class="input-group rounded overflow-hidden border">
-                           <span class="input-group-text bg-white border-0"><i class="bi bi-map-fill text-muted"></i></span>
-                           <input type="text" class="form-control bg-white border-0 ps-1" placeholder="e.g. Take Left">
-                        </div>
-                     </div>
-                     <div class="col-6 mb-3">
-                        <label class="form-label">Contact Person Name</label>
-                        <div class="input-group rounded overflow-hidden border">
-                           <span class="input-group-text bg-white border-0"><i class="bi bi-person-fill text-muted"></i></span>
-                           <input type="text" class="form-control bg-white border-0 ps-1" placeholder="e.g. Nikhal">
-                        </div>
-                     </div>
-                     <div class="col-6 mb-3">
-                        <label class="form-label">Contact Number</label>
-                        <div class="input-group rounded overflow-hidden border">
-                           <span class="input-group-text bg-white border-0"><i class="bi bi-telephone-fill text-muted"></i></span>
-                           <input type="text" class="form-control bg-white border-0 ps-1" placeholder="e.g. 12345678">
-                        </div>
-                     </div>
-                     <div class="col-12">
-                        <label class="form-label">Save Address As</label>
+                  <span class="text-danger fw-bold">METADATA</span>
+                  <form class="my-3">
+                     <fieldset disabled>
                         <div class="row">
-                           <div class="col-auto"><input type="radio" class="btn-check" name="btnradio" id="btnradio133">
-                              <label class="btn btn-outline-secondary" for="btnradio133">Home</label>
+                           <div class="items_metadata py-0">
+                              <button type="button" class="btn mb-2">Dataset Diperbarui</button>
+                              <button type="button" class="btn mb-2">Dataset Dibuat</button>
+                              <button type="button" class="btn mb-2">Frekuensi</button>
                            </div>
-                           <div class="col-auto px-0"><input type="radio" class="btn-check" name="btnradio" id="btnradio233">
-                              <label class="btn btn-outline-secondary" for="btnradio233">Office</label>
-                           </div>
-                           <div class="col-auto"><input type="radio" class="btn-check" name="btnradio" id="btnradio333">
-                              <label class="btn btn-outline-secondary" for="btnradio333">Other</label>
+                           <div class="items_metadata deskripsi_metadata py-2">
+                              <span class="mb-3">28 September 2022</span>
+                              <span class="mb-3">28 September 2021</span>
+                              <span class="mb-3">Tahunan</span>
                            </div>
                         </div>
-                     </div>
-                  </div>
+                     </fieldset>
+                   </form>
+
+                  <span class="text-danger fw-bold mt-5">FILE</span>
+                  <form class="mt-2">
+                     <fieldset disabled>
+                        <div class="row">
+                           <div class="items_metadata py-0">
+                              <button type="button" class="btn mb-2">Format Tersedia</button>
+                           </div>
+                           <div class="items_metadata deskripsi_metadata py-2">
+                              <span class="mb-3">Excel, CSV, APi</span>
+                           </div>
+                        </div>
+                     </fieldset>
+                   </form>
+
+                  <span class="text-danger fw-bold mt-3">Deskripsi</span>
+                  <p style="text-align: justify;" class="mt-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor dolore necessitatibus iste repellat, consectetur omnis eveniet provident, officiis laborum culpa pariatur nostrum eius dolores inventore similique enim cumque vitae molestias quis soluta nam! Quasi quam soluta ratione eos aliquid id, optio laudantium. Assumenda nulla libero inventore mollitia magnam, quibusdam vel doloribus, dolorum placeat quisquam quae id quia modi sit debitis animi excepturi iste maxime aperiam rem, cupiditate maiores quidem. Eius ab debitis illo expedita, perspiciatis recusandae, quo pariatur itaque excepturi harum sunt inventore. Assumenda sunt perferendis tempore ex, soluta molestiae natus quae eveniet dolorem aperiam atque veritatis numquam quia voluptate nihil consectetur quis iure voluptatum quam possimus laboriosam consequuntur voluptatibus aliquam quod? Nemo maxime incidunt ratione ab ut, inventore minima libero optio consequuntur quaerat? Quidem nisi vel enim distinctio! Modi excepturi assumenda eum ipsam eligendi, placeat odio voluptates, harum officiis quod ab exercitationem esse atque sed. Soluta exercitationem quos, architecto quibusdam quasi magni iure ad nisi adipisci quae? Nulla, perferendis consequuntur dolore incidunt animi officia doloribus in. Voluptatem nam natus optio laboriosam fuga explicabo nihil laudantium recusandae, placeat dolorem vero dolores. Minus adipisci cupiditate eligendi ipsam commodi libero ipsum magnam perspiciatis! Quos, delectus veritatis cum modi labore vero fuga aliquid.</p>
+
                </div>
                <div class="border-top d-flex">
-                  <button type="button" class="w-100 btn btn-lg py-4 border-0 btn-outline-danger rounded-0" data-bs-dismiss="modal">CLOSE</button>
-                  <button type="button" class="w-100 btn btn-lg py-4 border-0 btn-success rounded-0" data-bs-dismiss="modal">SAVE ADDRESS</button>
+                  <button type="button" class="w-100 btn btn-lg py-4 border-0 btn-danger rounded-0" data-bs-dismiss="modal">LIHAT DATASET</button>
                </div>
             </div>
          </div>
       </div>
+      <!-- END PRATINJAU DATASET -->
+
+      <!-- START MODAL REQUEST DATASET -->
+      <div class="modal fade" id="formRequestDataset" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-hidden="true">
+         <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content border-0 shadow overflow-hidden">
+               <div class="modal-header px-4">
+                  <h5 class="h6 modal-title fw-bold">FORM REQUEST DATASET</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+               </div>
+               <div class="modal-body p-4">
+                  <div class="row">
+                     <span class="text-danger fw-bold">IDENTITAS</span>
+                     <div class="col-12 mb-3 pt-3">
+                        <label class="form-label">Nama Lengkap</label>
+                        <div class="input-group rounded overflow-hidden border">
+                           <span class="input-group-text bg-white border-0"><i class="bi bi-person text-muted"></i></span>
+                           <input type="text" class="form-control bg-white border-0 ps-1" placeholder="Nama Lengkap">
+                        </div>
+                     </div>
+                     <div class="col-12 mb-3">
+                        <label class="form-label">Email</label>
+                        <div class="input-group rounded overflow-hidden border">
+                           <span class="input-group-text bg-white border-0"><i class="bi bi-envelope text-muted"></i></span>
+                           <input type="text" class="form-control bg-white border-0 ps-1" placeholder="Email">
+                        </div>
+                     </div>
+                     <div class="col-12 mb-3">
+                        <label class="form-label">No. Telp/Handphone</label>
+                        <div class="input-group rounded overflow-hidden border">
+                           <span class="input-group-text bg-white border-0"><i class="bi bi-telephone text-muted"></i></span>
+                           <input type="text" class="form-control bg-white border-0 ps-1" placeholder="No. Telp/HP">
+                        </div>
+                     </div>
+
+                     <span class="text-danger fw-bold mt-3 pt-3 border-top">INFORMASI PEKERJAAN</span>
+                     <div class="col-12 mb-3 pt-3">
+                        <label class="form-label">Pekerjaan</label>
+                        <select class="form-select" aria-label="Default select example">
+                           <option value="1">Pelajar/Mahasiswa/Akademisi</option>
+                           <option value="2">Pemerintahan</option>
+                           <option value="3">Profesional</option>
+                           <option value="4">Wirausaha</option>
+                           <option value="5">Lainnya</option>
+                         </select>
+                     </div>
+
+                     <span class="text-danger fw-bold mt-3 pt-3 border-top">INFORMASI KEBUTUHAN DATASET</span>
+                     <div class="col-12 mb-3 pt-3">
+                        <label class="form-label">Judul dataset yang dimohon</label>
+                        <div class="input-group rounded overflow-hidden border">
+                           <span class="input-group-text bg-white border-0"><i class="bi bi-file-earmark-ruled text-muted"></i></span>
+                           <input type="text" class="form-control bg-white border-0 ps-1" placeholder="Judul Dataset">
+                        </div>
+                     </div>
+                     <div class="col-12 mb-3">
+                        <label class="form-label">Tujuan Penggunaan Dataset</label>
+                        <select class="form-select" aria-label="Default select example">
+                           <option value="1">Referensi Kajian Bisnis</option>
+                           <option value="2">Referensi Pembuatan Kebijakan</option>
+                           <option value="3">Refernsi Pembuatan Kurikulum/Bahan Ajar</option>
+                           <option value="4">Referensi Tugas/Karya Ilmiah</option>
+                           <option value="5">Refernsi Pribadi</option>
+                           <option value="6">Lainnya</option>
+                         </select>
+                     </div>
+
+                  </div>
+               </div>
+               <div class="border-top d-flex">
+                  <div class="col-8 mt-3">
+                     <span class="ms-3 fw-bold">Hotline Satu Data Ogan Ilir</span>
+                     <ul>
+                        <li>Whatsapp : 0808-xxxx-xxxx</li>
+                        <li>Email : mail.satudata@mail.com</li>
+                     </ul>
+                  </div>
+                  <button type="button" class="w-100 btn btn-lg py-4 border-0 btn-danger rounded-0" data-bs-dismiss="modal">KIRIM</button>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- END MODAL REQUEST DATASET -->
+
       <div class="modal fade" id="trashpop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-hidden="true">
          <div class="modal-dialog modal-sm modal-dialog-centered">
             <div class="modal-content border-0 shadow overflow-hidden">
@@ -686,9 +747,10 @@
             </div>
          </div>
       </div>
+
       <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
          <div class="offcanvas-header border-bottom px-4">
-            <h6 class="offcanvas-title fw-bold" id="offcanvasRightLabel">Order #135071758810</h6>
+            <h6 class="offcanvas-title fw-bold" id="offcanvasRightLabel">FORM REQUEST DATASET</h6>
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
          </div>
          <div class="offcanvas-body p-4">
@@ -790,16 +852,61 @@
             </div>
          </div>
       </div>
+
       <div class="w-100 d-block d-md-none d-lg-none mobile-nav-bottom position-fixed d-flex align-items-center justify-content-around shadow-sm">
          <a href="index.html"><span class="bi bi-display"></span> Home</a>
          <a href="dataset.html"><span class="bi bi-file-earmark-spreadsheet"></span> Dataset</a>
          <a href="visualisasi.html"><span class="bi bi-file-earmark-bar-graph"></span> Visualisasi</a>
          <a data-bs-toggle="modal" href="#exampleModalToggle"><span class="bi bi-unlock-fill"></span> Sign In</a>
       </div>
-      <!-- Bootstrap core JavaScript -->
-      <script src="assets/vendor/jquery/jquery.min.js"></script>
-      <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
       <!-- Custom scripts for all pages-->
-      <script src="assets/js/custom.js"></script>
+      <script src="assets/vendor/bootstrap/js/bootstrap.min.js"></script>
+      <script src="assets/vendor/jquery/jquery.min.js"></script>
+
+      <script src="https://js.hcaptcha.com/1/api.js" async defer></script>
+
+      <!-- Vendor Css -->
+      <script src="assets/vendor/tables-data/datatables.min.js"></script>
+       <script src="assets/vendor/tables-data/pdfmake.min.js"></script>
+       <script src="assets/vendor/tables-data/vfs_fonts.js"></script>
+
+      <!-- Data Leaflet -->
+      <script src="https://unpkg.com/leaflet@1.9.1/dist/leaflet.js" integrity="sha256-NDI0K41gVbWqfkkaHj15IzU7PtMoelkzyKp8TOaFQ3s=" crossorigin=""></script>
+      <script src="assets/vendor/leaflet/oganilir_residence.js"></script>
+
+      <!-- Data Grafik -->
+      <script src="assets/vendor/chart.js/dist/chart.min.js"></script>
+      <script src="assets/vendor/chart.js/dist/data-grafik.js"></script>
+
+      <script src="assets/vendor/virtual-select-master/dist/virtual-select.min.js"></script>
+
+      <script>
+         $(document).ready(function () {
+            $('#example2').DataTable({
+               scrollY: 300,
+               scrollX: true,
+            });
+          });
+      </script>
+
+      <script>
+         $(document).ready(function() {
+            var table = $('#example').DataTable({
+               buttons:['copy', 'csv','excel','pdf','print']
+            });
+
+            table.buttons().container()
+            .appendTo('#example_wrapper .col-md-6:eq(0)');
+         });
+      </script>
+
+      <script>
+         VirtualSelect.init({ 
+            ele: '#multipSelect' 
+         });
+      </script>
+
+     
+
    </body>
 </html>
