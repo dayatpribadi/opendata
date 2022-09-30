@@ -5,15 +5,22 @@
       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
       <meta name="description" content="">
       <meta name="author" content="">
-      <link rel="icon" type="image/png" href="assets/img/fav.png">
-      <title>Bodegaa - Grocery Store & Pick Up Template</title>
+      <link rel="icon" type="image/png" href="assets/img/opendata/fav.png">
+      <title>Satu Data Kabupaten Ogan Ilir</title>
       <!-- Bootstrap core CSS -->
       <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
       <!-- Icofont Icon-->
       <link href="assets/vendor/icons/icofont.min.css" rel="stylesheet" type="text/css">
       <!-- Bootstraps icon -->
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
-      <link href="assets/css/style.css" rel="stylesheet">
+      <link rel="stylesheet" href="assets/css/style.css">
+      <link rel="stylesheet" href="assets/css/custom.css" >
+
+      <link rel="stylesheet" href="assets/vendor/tables-data/datatables.min.css">
+
+      <link rel="stylesheet" href="assets/vendor/virtual-select-master/dist/virtual-select.min.css">
+      <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.1/dist/leaflet.css" integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14=" crossorigin="" />
+
    </head>
    <body class="bg-light">
       <!-- Navbar -->
@@ -309,8 +316,10 @@
             </div>
          </div>
       </div>
-      <!-- Footer -->
-      <div class="footer py-5 bg-white shadow-sm">
+
+
+     <!-- Footer -->
+      <div class="footer py-5 d-none d-md-block">
          <div class="container">
             <div class="row">
                <h5 class="mb-4 fw-bold text-dark">Areas we deliver to</h5>
@@ -360,60 +369,51 @@
             </div>
          </div>
       </div>
-      <footer class="bg-footer py-5 d-none d-md-block">
+      <footer class="bg-footer py-5">
          <div class="container">
-            <div class="row mb-5">
-               <div class="col-12 text-white">
-                  <h6 class="fw-bold mb-4">You can't stop time, but you can save it</h6>
-                  <p class="text-white-50 m-0">Living in the city, there is never enough time to shop for groceries, pick-up supplies, grab food and wade through traffic on the way back home. How about we take care of all of the above for you? What if we can give you all that time back? Send packages across the city and get everything from food, groceries, medicines and pet supplies delivered right to your doorstep. From any store to your door, just make a list and we’ll make it disappear. Just Bodegaa It!</p>
+
+            <div class="row text-white mb-3">
+               <div class="col-md-3 col-12">
+                  <div><img src="assets/img/opendata/logo.png" alt="" class="img-fluid footer-logo mb-5"></div>
                </div>
+               <div class="col-md-3 col-6">
+                  <h6 class="text-uppercase mb-4 fw-bold">Satu Data Ogan Ilir</h6>
+                  <ul class="list-unstyled d-grid gap-2 text-decoration-none">
+                     <li><a class="text-decoration-none text-white-50" href="about.html">Tentang</a></li>
+                     <li><a class="text-decoration-none text-white-50" href="privacy.html">Kebijakan Privasi</a></li>
+                     <li><a class="text-decoration-none text-white-50" href="sla.html">Ketentuan Penggunaan</a></li>
+                     <li><a class="text-decoration-none text-white-50" href="faq.html">Bantuan</a></li>
+                  </ul>
+               </div>
+               <div class="col-md-3 col-6">
+                  <h6 class="text-uppercase mb-4 fw-bold">Sumber Data Lainnya</h6>
+                  <ul class="list-unstyled d-grid gap-2">
+                     <li><a class="text-decoration-none text-white-50" href="satudata.palembang.go.id">Satu Data Palembang</a></li>
+                     <li><a class="text-decoration-none text-white-50" href="satudata.sumselprov.go.id">Satu Data Sumsel</a></li>
+                     <li><a class="text-decoration-none text-white-50" href="data.go.id">Satu Data Indonesia</a></li>
+                  </ul>
+               </div>
+               <div class="col-md-3 col-6">
+                  <h6 class="text-uppercase mb-4 fw-bold">Kontak Kami</h6>
+                  <ul class="list-unstyled d-grid gap-2">
+                     <li><a class="text-decoration-none text-white-50" href="search.html">Whatsapp</a></li>
+                     <li><a class="text-decoration-none text-white-50" href="listing.html">Instagram</a></li>
+                     <li><a class="text-decoration-none text-white-50" href="listing-detail.html">Facebook</a></li>
+                  </ul>
+               </div>
+
             </div>
             <hr class="text-white">
-            <div class="row text-white mt-5">
-               <div class="col-md-4 col-12">
-                  <div><img src="assets/img/fav.png" alt="" class="img-fluid footer-logo"></div>
+            <div class="row mt-4">
+               <div class="col-8 text-white">
+                  <h6 class="fw-bold mb-2">Satu Data Kabupaten Ogan Ilir</h6>
+                  <p class="text-white-50 m-0">Copyright @ 2022 <span class="text-white">Pusat Data dan Informasi</span> | Dinas Komunikasi Informatika Statistik dan Persandian Kabupaten Ogan Ilir</p>
                </div>
-               <div class="col-md-2 col-6">
-                  <h6 class="text-uppercase mb-4 fw-bold">Bodegaa</h6>
-                  <ul class="list-unstyled d-grid gap-2 text-decoration-none">
-                     <li><a class="text-decoration-none text-white-50" href="about.html">About us</a></li>
-                     <li><a class="text-decoration-none text-white-50" href="jobs.html">Jobs</a></li>
-                     <li><a class="text-decoration-none text-white-50" href="contact.html">Contact Us</a></li>
-                     <li><a class="text-decoration-none text-white-50" href="cupons.html">Cupons</a></li>
-                  </ul>
-               </div>
-               <div class="col-md-2 col-6">
-                  <h6 class="text-uppercase mb-4 fw-bold">My Profile</h6>
-                  <ul class="list-unstyled d-grid gap-2">
-                     <li><a class="text-decoration-none text-white-50" href="profile.html">Orders List</a></li>
-                     <li><a class="text-decoration-none text-white-50" href="profile.html">Addresses</a></li>
-                     <li><a class="text-decoration-none text-white-50" href="profile.html">Manage Payments</a></li>
-                     <li><a class="text-decoration-none text-white-50" href="profile.html">Bodegaa Cash</a></li>
-                     <li><a class="text-decoration-none text-white-50" href="profile.html">Support / Help</a></li>
-                  </ul>
-               </div>
-               <div class="col-md-2 col-6">
-                  <h6 class="text-uppercase mb-4 fw-bold">Shop Pages</h6>
-                  <ul class="list-unstyled d-grid gap-2">
-                     <li><a class="text-decoration-none text-white-50" href="search.html">Search</a></li>
-                     <li><a class="text-decoration-none text-white-50" href="listing.html">Listing</a></li>
-                     <li><a class="text-decoration-none text-white-50" href="listing-detail.html">Listing Detail</a></li>
-                     <li><a class="text-decoration-none text-white-50" href="product-detail.html">Product Detail</a></li>
-                     <li><a class="text-decoration-none text-white-50" href="cart.html">Cart / Checkout</a></li>
-                     <li><a class="text-decoration-none text-white-50" href="success-order.html">Success Order</a></li>
-                  </ul>
-               </div>
-               <div class="col-md-2 col-6">
-                  <h6 class="text-uppercase mb-4 fw-bold">get in touch</h6>
-                  <ul class="list-unstyled d-grid gap-2">
-                     <li><a class="text-decoration-none text-white-50" href="#">Email</a></li>
-                     <li><a class="text-decoration-none text-white-50" href="#">Twitter</a></li>
-                     <li><a class="text-decoration-none text-white-50" href="#">Facebook</a></li>
-                     <li><a class="text-decoration-none text-white-50" href="#">Instagram</a></li>
-                     <li><a class="text-decoration-none text-white-50" href="#">Linkedin</a></li>
-                  </ul>
+               <div class="col-4 text-end align-items-center">
+                  <img src="assets/img/opendata/oibangkit.png" class="img-fluid w-50" alt="">
                </div>
             </div>
+
          </div>
       </footer>
       <!-- Sign in Modal -->
@@ -617,15 +617,58 @@
          </div>
       </div>
       <div class="w-100 d-block d-md-none d-lg-none mobile-nav-bottom position-fixed d-flex align-items-center justify-content-around shadow-sm">
+         <a href="index.html"><span class="bi bi-display"></span> Home</a>
+         <a href="dataset.html"><span class="bi bi-file-earmark-spreadsheet"></span> Dataset</a>
+         <a href="visualisasi.html"><span class="bi bi-file-earmark-bar-graph"></span> Visualisasi</a>
          <a data-bs-toggle="modal" href="#exampleModalToggle"><span class="bi bi-unlock-fill"></span> Sign In</a>
-         <a href="listing.html"><span class="bi bi-card-heading"></span> Listing</a>
-         <a href="cart.html"><span class="bi bi-basket-fill"></span> Cart <b>2</b></a>
-         <a href="profile.html"><span class="bi bi-person-badge"></span> Account</a>
       </div>
-      <!-- Bootstrap core JavaScript -->
-      <script src="assets/vendor/jquery/jquery.min.js"></script>
-      <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
       <!-- Custom scripts for all pages-->
-      <script src="assets/js/custom.js"></script>
+      <script src="assets/vendor/bootstrap/js/bootstrap.min.js"></script>
+      <script src="assets/vendor/jquery/jquery.min.js"></script>
+
+      <script src="https://js.hcaptcha.com/1/api.js" async defer></script>
+
+      <!-- Vendor Css -->
+      <script src="assets/vendor/tables-data/datatables.min.js"></script>
+       <script src="assets/vendor/tables-data/pdfmake.min.js"></script>
+       <script src="assets/vendor/tables-data/vfs_fonts.js"></script>
+
+      <!-- Data Leaflet -->
+      <script src="https://unpkg.com/leaflet@1.9.1/dist/leaflet.js" integrity="sha256-NDI0K41gVbWqfkkaHj15IzU7PtMoelkzyKp8TOaFQ3s=" crossorigin=""></script>
+      <script src="assets/vendor/leaflet/oganilir_residence.js"></script>
+
+      <!-- Data Grafik -->
+      <script src="assets/vendor/chart.js/dist/chart.min.js"></script>
+      <script src="assets/vendor/chart.js/dist/data-grafik.js"></script>
+
+      <script src="assets/vendor/virtual-select-master/dist/virtual-select.min.js"></script>
+
+      <script>
+         $(document).ready(function () {
+            $('#example2').DataTable({
+               scrollY: 300,
+               scrollX: true,
+            });
+          });
+      </script>
+
+      <script>
+         $(document).ready(function() {
+            var table = $('#example').DataTable({
+               buttons:['copy', 'csv','excel','pdf','print']
+            });
+
+            table.buttons().container()
+            .appendTo('#example_wrapper .col-md-6:eq(0)');
+         });
+      </script>
+
+      <script>
+         VirtualSelect.init({ 
+            ele: '#multipSelect' 
+         });
+      </script>
+      
+
    </body>
 </html>
